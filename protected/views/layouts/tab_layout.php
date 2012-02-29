@@ -1,0 +1,22 @@
+<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
+
+<html>
+	<head>
+		<title><?php echo CHtml::encode(Yii::app()->name); ?></title>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+		<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.reveal.js"></script>
+		<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/facebook.wrapper.js"></script>
+		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/reveal.css" type="text/css" rel="stylesheet">
+		<style>
+			body
+			{
+				width:520px;
+			}
+		</style>
+	</head>
+	<body>
+		THE TAB
+		<?php echo $content; ?>
+		<a href="<?php echo Yii::app()->createurl('universe/')?>">Go</a>
+	</body>
+</html>
