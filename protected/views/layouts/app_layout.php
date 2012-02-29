@@ -1,6 +1,6 @@
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 
-<html>
+<!DOCTYPE html>
 	<head>
 		<title><?php echo CHtml::encode(Yii::app()->name); ?></title>
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
@@ -10,7 +10,19 @@
 		<style>
 			body
 			{
-				width:760px;
+				margin:0px;
+				padding:0px;
+				width:100%;
+				height:100%
+			}
+			
+			#yt0
+			{
+				background:url(../images/canvas/button-submit.jpg) no-repeat;
+				height:39px;
+				width:149px;
+				border:none;
+				cursor:pointer;
 			}
 		</style>
 	</head>
@@ -32,18 +44,21 @@
     		status: true, 
     		cookie: true,
     		oauth:  true,
-				xfbml: true
+			xfbml: true,
+			channelUrl : 'http://<?php echo $_SERVER['HTTP_HOST']; ?>/channel.html', // Channel File
 			}
 		);
-	
+		FB.Canvas.setAutoGrow();
 		// add function here to trigger after FB.init completes
   };
 	(function(d){
-		var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-		js = d.createElement('script'); js.id = id; js.async = true;
-		js.src = "//connect.facebook.net/en_US/all.js";
-		d.getElementsByTagName('head')[0].appendChild(js);
-	}(document));
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+	
 	
 </script>
 

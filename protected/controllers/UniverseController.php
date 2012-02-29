@@ -17,7 +17,16 @@ class UniverseController extends Controller
 	
 	public function actionIndex()
 	{
-		//$this->facebook->connect();
+		$this->facebook->connect();
+		
+		$user = User::model()->findByPk($this->facebook->getFbid());
+		
+		if( count($user)==1 )
+		{
+			$this->redirect(Yii::app()->createUrl('universe/create'));
+		}
+		
+		//echo $this->facebook->getFbid();
 		$model = new User;
 		$this->render('index', array('model'=>$model));
 	}
@@ -57,6 +66,38 @@ class UniverseController extends Controller
 		}
 	}
 	
+	public function actionFinish()
+	{
+		if ( isset ( $GLOBALS["HTTP_RAW_POST_DATA"] )) 
+		{
+		    //the image file name   
+		    $fileName = 'images/temp/'. $this->facebook->getFbid() . '.jpg';
+		
+		    // get the binary stream
+		    $im = $GLOBALS["HTTP_RAW_POST_DATA"];
+		
+		    //write it
+		    $fp = fopen($fileName, 'wb');
+		    fwrite($fp, $im);
+		    fclose($fp);
+		
+		    //echo the fileName;
+		    echo $fileName;
+		}  
+		else 
+		    echo 'result=An error occured.';
+	}
+	
+	
+	public function actionView()
+	{
+		$fbid = $this->facebook->getFbid();
+		$this->render('view', array('fbid'=>$fbid));
+	}
+	
+	
+	
+	
 	public function actionCampus()
 	{
 		$campus = Campus::model()->findAll();
@@ -67,7 +108,13 @@ class UniverseController extends Controller
 			$data[$id]['name']=$arr['name'];
 			$data[$id]['enabled']='true';
 		}
+		$this->layout='//layouts/xml_layout';
 		$this->render('xml', array('data'=>$data, 'type'=>'campus'));
+	}
+	
+	public function actionCreate()
+	{
+		$this->render('create');
 	}
 	
 	public function actionCourse()
@@ -79,6 +126,7 @@ class UniverseController extends Controller
 			$data[$id]['name']=$arr['name'];
 			$data[$id]['enabled']='true';
 		}
+		$this->layout='//layouts/xml_layout';
 		$this->render('xml', array('data'=>$data, 'type'=>'course'));
 	}
 	
@@ -116,6 +164,7 @@ class UniverseController extends Controller
 			
 			
 		}
+		$this->layout='//layouts/xml_layout';
 		$this->render('xml', array('data'=>$data, 'type'=>'course'));
 	}
 
@@ -151,6 +200,7 @@ class UniverseController extends Controller
 				$data[$id]['enabled']='false';
 			}
 		}
+		$this->layout='//layouts/xml_layout';
 		$this->render('xml', array('data'=>$data, 'type'=>'campus'));
 	}
 	

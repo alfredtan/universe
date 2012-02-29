@@ -5146,3 +5146,224 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/02/29 22:45:12 [error] [php] Undefined variable: form (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:18)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(22): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionIndex()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (18)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (22)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/02/29 22:52:08 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `user` (`name`, `nric`, `mobile`, `email`, `fbid`, `campusId`, `dateRegistered`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, NOW()).
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (41)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/02/29 22:52:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `user` (`name`, `nric`, `mobile`, `email`, `fbid`, `campusId`, `dateRegistered`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, NOW())' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Users/alfredtan/Sites/yii_framework/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(41): CActiveRecord->save()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionRegister()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('register')
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/regist...')
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#11 {main}
+REQUEST_URI=/universe/register
+HTTP_REFERER=http://inti.dev/universe
+---
+2012/02/29 22:52:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('create')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('create')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/create')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/universe/create
+HTTP_REFERER=http://inti.dev/universe
+---
+2012/02/29 22:55:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Untitled-1.swf".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('Untitled-1.swf')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('Untitled-1.swf')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/Untitl...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/universe/Untitled-1.swf
+HTTP_REFERER=http://inti.dev/universe/create
+---
+2012/02/29 22:56:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "inti.swf".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('inti.swf')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('inti.swf')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/inti.s...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/universe/inti.swf
+HTTP_REFERER=http://inti.dev/universe/create
+---
+2012/02/29 23:14:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "universe".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('universe')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('universe')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/univer...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/universe/universe/finish
+HTTP_REFERER=http://inti.dev/swf/inti.swf
+---
+2012/02/29 23:14:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "universe".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('universe')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('universe')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/univer...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/universe/universe/finish
+---
+2012/02/29 23:26:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/canvas/button-submit.jpg".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('images/canvas/b...')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/canvas/button-submit.jpg
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/index.php/universe/
+---
+2012/02/29 23:27:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/canvas/button-submit.jpg".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('images/canvas/b...')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/canvas/button-submit.jpg
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/index.php/universe/
+---
+2012/02/29 23:28:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/canvas/button-submit.jpg".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('images/canvas/b...')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/canvas/button-submit.jpg
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/index.php/universe/
+---
+2012/02/29 23:28:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/canvas/button-submit.jpg".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('images/canvas/b...')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/canvas/button-submit.jpg
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/index.php/universe/
+---
+2012/02/29 23:29:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/canvas/button-submit.jpg".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('images/canvas/b...')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/canvas/button-submit.jpg
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/index.php/universe/
+---
+2012/02/29 23:30:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/canvas/button-submit.jpg".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('images/canvas/b...')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/canvas/button-submit.jpg
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/index.php/universe/
+---
+2012/02/29 23:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/canvas/button-submit.jpg".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('images/canvas/b...')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/canvas/button-submit.jpg
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/index.php/universe/
+---
+2012/02/29 23:32:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/canvas/button-submit.jpg".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('images/canvas/b...')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/images/canvas/button-submit.jpg
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/index.php/universe/
+---
+2012/02/29 23:53:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "crossdomain.xml".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('crossdomain.xml')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/crossdomain.xml
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/swf/inti.swf
+---
+2012/02/29 23:55:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "crossdomain.xml".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('crossdomain.xml')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/crossdomain.xml
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/swf/inti.swf
+---
+2012/03/01 00:00:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create/finish".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('create/finish')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/create/finish
+---
+2012/03/01 00:01:20 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '552072128' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `user` (`name`, `nric`, `mobile`, `email`, `fbid`, `campusId`, `dateRegistered`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, NOW()).
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (43)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/01 00:01:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '552072128' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `user` (`name`, `nric`, `mobile`, `email`, `fbid`, `campusId`, `dateRegistered`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, NOW())' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/ar/CActiveRecord.php(1014): CDbCommand->execute()
+#1 /Users/alfredtan/Sites/yii_framework/framework/db/ar/CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(43): CActiveRecord->save()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionRegister()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('register')
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/regist...')
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#11 {main}
+REQUEST_URI=/universe/register
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/universe/
+---
+2012/03/01 00:55:28 [error] [php] fopen(images/temp/0.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:80)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/finish
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (80)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)

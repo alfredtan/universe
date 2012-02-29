@@ -44,7 +44,12 @@ class FacebookController extends Controller
 			
 			if($this->facebook->isConnected())
 			{
-				$this->redirect('/universe');
+				//$this->redirect('/universe');
+				$this->redirect('https://apps.facebook.com/localdevapp/');
+			}
+			else
+			{
+				echo 'facebook/authorize not connected';
 			}
 		/*}
 		else 

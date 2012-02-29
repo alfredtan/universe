@@ -10,13 +10,18 @@
 		<style>
 			body
 			{
-				width:520px;
+				margin:0px;
+				padding:0px;
+				width:497px;
 			}
 		</style>
 	</head>
 	<body>
-		THE TAB
+		<div id="wrapper">
+			<div><a target="_top" href="https://apps.facebook.com/localdevapp/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-01.jpg" width="497" height="250" border="0"></a></div>
+			<div><a target="_top" href="https://apps.facebook.com/localdevapp/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-02.jpg" width="497" height="250" border="0"></a></div>
+			<div><a target="_top" href="https://apps.facebook.com/localdevapp/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-03.jpg" width="497" height="260" border="0"></a></div>
+		</div>
 		<?php echo $content; ?>
-		<a href="<?php echo Yii::app()->createurl('universe/')?>">Go</a>
 	</body>
 </html>

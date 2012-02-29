@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <items>
 	<?php 
 		foreach ($data as $k=>$arr)
