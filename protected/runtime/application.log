@@ -5367,3 +5367,60 @@ Stack trace:
 REQUEST_URI=/universe/finish
 in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (80)
 in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/01 23:14:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'mysql_admin'@'localhost' (using password: YES)' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CDbHttpSession.php(154): CModule->getComponent('db')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CDbHttpSession.php(206): CDbHttpSession->getDbConnection()
+#5 [internal function]: CDbHttpSession->readSession('b2922b7e3df163f...')
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CHttpSession.php(115): session_start()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CHttpSession.php(89): CHttpSession->open()
+#8 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(388): CHttpSession->init()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(104): CModule->getComponent('session')
+#10 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(13): CModule->__get('session')
+#11 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(307): UniverseController->beforeAction(Object(CInlineAction))
+#12 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('create')
+#15 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/create')
+#16 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#18 {main}
+REQUEST_URI=/universe/create
+---
+2012/03/01 23:14:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'mysql_admin'@'localhost' (using password: YES)' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CDbHttpSession.php(154): CModule->getComponent('db')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CDbHttpSession.php(206): CDbHttpSession->getDbConnection()
+#5 [internal function]: CDbHttpSession->readSession('b2922b7e3df163f...')
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CHttpSession.php(115): session_start()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CHttpSession.php(89): CHttpSession->open()
+#8 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(388): CHttpSession->init()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(104): CModule->getComponent('session')
+#10 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(13): CModule->__get('session')
+#11 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(307): UniverseController->beforeAction(Object(CInlineAction))
+#12 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('create')
+#15 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/create')
+#16 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#18 {main}
+REQUEST_URI=/universe/create
+---
+2012/03/01 23:51:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "inti.swf".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('inti.swf')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('inti.swf')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/inti.s...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/universe/inti.swf
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/universe/create
+---
