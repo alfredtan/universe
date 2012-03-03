@@ -1,21 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "campus".
+ * This is the model class for table "interest".
  *
- * The followings are the available columns in table 'campus':
+ * The followings are the available columns in table 'interest':
  * @property integer $id
  * @property string $name
  * @property string $word
  * @property string $headline
  * @property string $tooltip
  */
-class Campus extends CActiveRecord
+class Interest extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Campus the static model class
+	 * @return Interest the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +27,7 @@ class Campus extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'campus';
+		return 'interest';
 	}
 
 	/**

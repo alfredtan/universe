@@ -1,5 +1,9 @@
 <?php
-
+/*
+ * SELECT c.id as campusId, c.name as campusName, c.headline as campusHeadline, c.tooltip as campusTooltip, s.id as courseId, s.name as courseName, s.headline as courseHeadline, s.tooltip as courseTooltip FROM `campus_course` cc
+left join campus c on cc.campusId=c.id 
+right join course s on cc.courseId=s.id
+ * */
 class UniverseController extends Controller
 {
 	public $layout = '//layouts/app_layout';
@@ -15,15 +19,17 @@ class UniverseController extends Controller
 		return true;
 	}
 	
+	
 	public function actionIndex()
 	{
-		//$this->facebook->connect();
+		$this->facebook->connect();
+		// die($this->facebook->getAccessToken());
 		
 		$user = User::model()->findByPk($this->facebook->getFbid());
 		
 		if( count($user)==1 )
 		{
-			//$this->redirect(Yii::app()->createUrl('universe/create'));
+			$this->redirect(Yii::app()->createUrl('universe/create'));
 		}
 		
 		//echo $this->facebook->getFbid();
@@ -70,12 +76,10 @@ class UniverseController extends Controller
 	{
 		if ( isset ( $GLOBALS["HTTP_RAW_POST_DATA"] )) 
 		{
-			$total = Universe::model()->findAll('fbid=:fbid order by id desc', array(':fbid'=>$this->facebook->getFbid()));
-			
-			
+			$universe = $this->getLatestUniverse();
 			
 		    //the image file name   
-		    $fileName = 'images/created_universe/'. $this->facebook->getFbid() . '_' . $total[0]['id'] . '.jpg';
+		    $fileName = 'images/created_universe/'. $this->facebook->getFbid() . '_' . $universe['id'] . '.jpg';
 		
 		    // get the binary stream
 		    $im = $GLOBALS["HTTP_RAW_POST_DATA"];
@@ -86,17 +90,24 @@ class UniverseController extends Controller
 		    fclose($fp);
 		
 		    //echo the fileName;
-		    echo $fileName;
+		    //echo $fileName;
+		    
+		    $this->uploadImageToFacebook();
 		}  
 		else 
 		    echo 'result=An error occured.';
 	}
 	
+	public function getLatestUniverse()
+	{
+		return Universe::model()->find('fbid=:fbid order by id desc', array(':fbid'=>$this->facebook->getFbid()));
+	}
 	
 	public function actionView()
 	{
-		$fbid = $this->facebook->getFbid();
-		$this->render('view', array('fbid'=>$fbid));
+		$universe = $this->getLatestUniverse();
+		$message = $this->getMessage();
+		$this->render('view', array('universe'=>$universe, 'message'=>$message));
 	}
 	
 	
@@ -104,16 +115,108 @@ class UniverseController extends Controller
 	{
 		$img = file_get_contents('https://graph.facebook.com/' . $id . '/picture?type=square');
 		echo $img;
-		// $fbid = $this->facebook->getFbid();
-		// $fbid=$id;
-// 		
-		// $fileName = "images/fb_profiles/" . $fbid . "_profile.jpg";
-		// $img = file_get_contents('https://graph.facebook.com/' . $fbid . '/picture?type=normal');
-		 //write it
-	 //   $fp = fopen($fileName, 'wb');
-	   // fwrite($fp, $img);
-	   // fclose($fp);
-		//file_put_contents($file, $img);
+	}
+	
+	public function actionQuiz()
+	{
+		if(Yii::app()->request->isAjaxRequest)
+		{
+			$quiz = Quiz::model()->findByPk($this->facebook->getFbid());
+			if(count($quiz)>0) 
+			{
+				$response = array(
+					'status'=>'success',
+					'data'=> ''
+				);
+			}
+			else
+			{
+				$quiz = new Quiz;
+				$_POST['Quiz']['fbid'] = $this->facebook->getFbid();
+				$quiz->attributes = $_POST['Quiz'];
+				
+				if($quiz->validate() && $quiz->save() )
+				{
+					$response = array(
+						'status'=>'success',
+						'data'=> ''
+					);
+				}
+				else
+				{
+					$response = array(
+						'status'=>'fail',
+						'data'=> $quiz->getErrors()
+					);
+				}
+			}
+			
+			echo CJSON::encode( $response );
+		}
+	}
+
+
+
+	//In your Uni-verse,you are a World traveling Entrepreneur who enjoys badminton at the beach on the weekends with your chess crew, friends
+	public function uploadImageToFacebook()
+	{
+		try{
+			$this->facebook->connect();
+			$universe = $this->getLatestUniverse();
+			if( count($universe)==0 ) return;
+			
+			$file= 'images/created_universe/' . $this->facebook->getFbid() . '_' . $universe['id'] . '.jpg';
+			
+			$tags = array();
+			if( $universe['friend1']>0 ) $tags[]['tag_uid'] = $universe['friend1'];
+			if( $universe['friend2']>0 ) $tags[]['tag_uid'] = $universe['friend2'];
+			if( $universe['friend3']>0 ) $tags[]['tag_uid'] = $universe['friend3'];
+			
+			$args = array(
+			        'message' => $this->getMessage(),
+			        'source' => '@' . realpath($file)
+			        );
+	
+			$resp = $this->facebook->uploadPhoto($args);
+			foreach($tags as $id=>$arr)
+			{
+				$this->facebook->tagPhoto( $resp['id'], $arr['tag_uid']);
+			}
+		}
+		catch( Exception $e)
+		{
+			// if there's an error, most probably it is permsision issue. ignore it
+			//echo $e->getMessage();
+			//die();
+		}
+	}
+	
+	public function getMessage()
+	{
+		$words = Yii::app()->db->createCommand()
+			->select('campus.word as campusWord, course.word as courseWord, interest.word as interestWord, life.word as lifeWord')
+			->from('universe, campus, course, interest, life')
+			->where('universe.campusId = campus.id and
+					universe.courseId = course.id and
+					universe.interestId = interest.id and
+					universe.lifeId = life.id and
+					universe.fbid=:fbid', array(':fbid'=>$this->facebook->getFbid())
+					)
+			->order('universe.id desc')
+			->queryRow();
+			
+		//In your Uni-verse,you are a World traveling Entrepreneur who enjoys badminton at the beach on the weekends with your chess crew, friends;
+		return "In your Uni-verse, you are a " . $words['lifeWord'] . " " . $words['courseWord'] . " who enjoys " . $words['interestWord'] . " "  . $words['campusWord'];
+
+		// SELECT campus.word as campusWord, course.word as courseWord, interest.word as interestWord, life.word as lifeWord 
+		// FROM universe, campus, course, interest, life 
+		// where 
+		// universe.campusId = campus.id and
+		// universe.courseId = course.id and
+		// universe.interestId = interest.id and
+		// universe.lifeId = life.id and
+		// universe.id=4;
+				
 	}
 	
 	public function actionSave()
@@ -143,6 +246,15 @@ class UniverseController extends Controller
 		// print_r($_SESSION);
 	}
 	
+	public function actionCreate()
+	{
+		$data['fbid']=$this->facebook->getFbid();
+		$user = User::model()->findByPk($data['fbid']);
+		$data['name'] = $user['name'];
+		
+		$this->render('create', array('data'=>$data));
+	}
+	
 	/****************************************************************************************/
 	
 	
@@ -155,19 +267,14 @@ class UniverseController extends Controller
 			$data[$id]['id']=$arr['id'];
 			$data[$id]['name']=$arr['name'];
 			$data[$id]['enabled']='true';
+			$data[$id]['headline']=$arr['headline'];
+			$data[$id]['tooltip']=$arr['tooltip'];
 		}
 		$this->layout='//layouts/xml_layout';
 		$this->render('xml', array('data'=>$data, 'type'=>'campus'));
 	}
 	
-	public function actionCreate()
-	{
-		$data['fbid']=$this->facebook->getFbid();
-		$user = User::model()->findByPk($data['fbid']);
-		$data['name'] = $user['name'];
-		
-		$this->render('create', array('data'=>$data));
-	}
+	
 	
 	public function actionCourse()
 	{
@@ -177,9 +284,43 @@ class UniverseController extends Controller
 			$data[$id]['id']=$arr['id'];
 			$data[$id]['name']=$arr['name'];
 			$data[$id]['enabled']='true';
+			$data[$id]['headline']=$arr['headline'];
+			$data[$id]['tooltip']=$arr['tooltip'];
 		}
 		$this->layout='//layouts/xml_layout';
 		$this->render('xml', array('data'=>$data, 'type'=>'course'));
+	}
+	
+	public function actionInterest()
+	{
+		$campus = Interest::model()->findAll();
+		$data = array();
+		foreach ($campus as $id=>$arr)
+		{
+			$data[$id]['id']=$arr['id'];
+			$data[$id]['name']=$arr['name'];
+			$data[$id]['enabled']='true';
+			$data[$id]['headline']=$arr['headline'];
+			$data[$id]['tooltip']=$arr['tooltip'];
+		}
+		$this->layout='//layouts/xml_layout';
+		$this->render('xml', array('data'=>$data, 'type'=>'campus'));
+	}
+	
+	public function actionLife()
+	{
+		$campus = Life::model()->findAll();
+		$data = array();
+		foreach ($campus as $id=>$arr)
+		{
+			$data[$id]['id']=$arr['id'];
+			$data[$id]['name']=$arr['name'];
+			$data[$id]['enabled']='true';
+			$data[$id]['headline']=$arr['headline'];
+			$data[$id]['tooltip']=$arr['tooltip'];
+		}
+		$this->layout='//layouts/xml_layout';
+		$this->render('xml', array('data'=>$data, 'type'=>'campus'));
 	}
 	
 	public function actionCourseByCampus($id)
@@ -204,6 +345,8 @@ class UniverseController extends Controller
 			
 			$data[$id]['id']=$arr['id'];
 			$data[$id]['name']=$arr['name'];
+			$data[$id]['headline']=$arr['headline'];
+			$data[$id]['tooltip']=$arr['tooltip'];
 
 			if($found)
 			{
@@ -242,6 +385,8 @@ class UniverseController extends Controller
 			
 			$data[$id]['id']=$arr['id'];
 			$data[$id]['name']=$arr['name'];
+			$data[$id]['headline']=$arr['headline'];
+			$data[$id]['tooltip']=$arr['tooltip'];
 
 			if($found)
 			{

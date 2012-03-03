@@ -1,21 +1,19 @@
 <?php
 
 /**
- * This is the model class for table "campus".
+ * This is the model class for table "quiz".
  *
- * The followings are the available columns in table 'campus':
- * @property integer $id
- * @property string $name
- * @property string $word
- * @property string $headline
- * @property string $tooltip
+ * The followings are the available columns in table 'quiz':
+ * @property string $fbid
+ * @property integer $total
+ * @property string $dateQuiz
  */
-class Campus extends CActiveRecord
+class Quiz extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Campus the static model class
+	 * @return Quiz the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +25,7 @@ class Campus extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'campus';
+		return 'quiz';
 	}
 
 	/**
@@ -38,12 +36,16 @@ class Campus extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, word, headline, tooltip', 'required'),
-			array('name, word', 'length', 'max'=>150),
-			array('headline', 'length', 'max'=>200),
+			array('fbid', 'required'),
+			array('total', 'required', 'message'=>'Please select an answer.'),
+			array('total', 'numerical', 'integerOnly'=>true),
+			array('fbid', 'length', 'max'=>20),
+			array('dateQuiz','default',
+              'value'=>new CDbExpression('NOW()'),
+              'setOnEmpty'=>false,'on'=>'insert'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, word, headline, tooltip', 'safe', 'on'=>'search'),
+			array('fbid, total, dateQuiz', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,11 +66,9 @@ class Campus extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'name' => 'Name',
-			'word' => 'Word',
-			'headline' => 'Headline',
-			'tooltip' => 'Tooltip',
+			'fbid' => 'Fbid',
+			'total' => 'Total',
+			'dateQuiz' => 'Date Quiz',
 		);
 	}
 
@@ -83,11 +83,9 @@ class Campus extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('word',$this->word,true);
-		$criteria->compare('headline',$this->headline,true);
-		$criteria->compare('tooltip',$this->tooltip,true);
+		$criteria->compare('fbid',$this->fbid,true);
+		$criteria->compare('total',$this->total);
+		$criteria->compare('dateQuiz',$this->dateQuiz,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

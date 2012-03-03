@@ -6,8 +6,12 @@
  * The followings are the available columns in table 'view_campus_course':
  * @property integer $campusId
  * @property string $campusName
+ * @property string $campusHeadline
+ * @property string $campusTooltip
  * @property integer $courseId
  * @property string $courseName
+ * @property string $courseHeadline
+ * @property string $courseTooltip
  */
 class ViewCampusCourse extends CActiveRecord
 {
@@ -37,12 +41,13 @@ class ViewCampusCourse extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('courseName', 'required'),
+			array('campusId, campusName, campusHeadline, campusTooltip, courseId, courseName, courseHeadline, courseTooltip', 'required'),
 			array('campusId, courseId', 'numerical', 'integerOnly'=>true),
 			array('campusName, courseName', 'length', 'max'=>150),
+			array('campusHeadline, courseHeadline', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('campusId, campusName, courseId, courseName', 'safe', 'on'=>'search'),
+			array('campusId, campusName, campusHeadline, campusTooltip, courseId, courseName, courseHeadline, courseTooltip', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,8 +70,12 @@ class ViewCampusCourse extends CActiveRecord
 		return array(
 			'campusId' => 'Campus',
 			'campusName' => 'Campus Name',
+			'campusHeadline' => 'Campus Headline',
+			'campusTooltip' => 'Campus Tooltip',
 			'courseId' => 'Course',
 			'courseName' => 'Course Name',
+			'courseHeadline' => 'Course Headline',
+			'courseTooltip' => 'Course Tooltip',
 		);
 	}
 
@@ -83,8 +92,12 @@ class ViewCampusCourse extends CActiveRecord
 
 		$criteria->compare('campusId',$this->campusId);
 		$criteria->compare('campusName',$this->campusName,true);
+		$criteria->compare('campusHeadline',$this->campusHeadline,true);
+		$criteria->compare('campusTooltip',$this->campusTooltip,true);
 		$criteria->compare('courseId',$this->courseId);
 		$criteria->compare('courseName',$this->courseName,true);
+		$criteria->compare('courseHeadline',$this->courseHeadline,true);
+		$criteria->compare('courseTooltip',$this->courseTooltip,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

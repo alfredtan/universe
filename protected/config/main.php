@@ -113,7 +113,7 @@ return array(
 		'adminEmail'=>'alfredtph@gmail.com',
 		'facebookAppId'=>'211113102317615',
 		'facebookAppSecret'=>'a1177a107d36e999b2e5f416b649634c',
-		'facebookAppScope'=>'',
+		'facebookAppScope'=>'email,publish_stream,user_photos',
 		'fanPageUrl'=>'http://www.facebook.com/pages/WooHoos-Test-Fan-Page/139884799379948?sk=app_211113102317615',
 		'feedIcon'=>'http://fbrell.com/f8.jpg',
 	),

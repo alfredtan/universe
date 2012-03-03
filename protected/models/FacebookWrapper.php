@@ -102,11 +102,22 @@ class FacebookWrapper
 	
 	function postToMyWall($params)
 	{
-		return $this->facebook->api('/553887054/feed','POST',$params);
+		return $this->facebook->api('/me/feed','POST',$params);
 	}
 	
 	public function attributeNames()
     {
             
     }
+	
+	public function uploadPhoto($params)
+	{
+		$this->facebook->setFileUploadSupport(true);
+		return $this->facebook->api('/me/photos', 'POST', $params );
+	}
+	
+	public function tagPhoto($photoid, $fbid)
+	{
+		return $this->facebook->api($photoid . '/tags/' . $fbid, 'POST' );
+	}
 }

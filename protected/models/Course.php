@@ -7,6 +7,8 @@
  * @property integer $id
  * @property string $name
  * @property string $word
+ * @property string $headline
+ * @property string $tooltip
  */
 class Course extends CActiveRecord
 {
@@ -36,11 +38,12 @@ class Course extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, word', 'required'),
+			array('name, word, headline, tooltip', 'required'),
 			array('name, word', 'length', 'max'=>150),
+			array('headline', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, word', 'safe', 'on'=>'search'),
+			array('id, name, word, headline, tooltip', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +67,8 @@ class Course extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'word' => 'Word',
+			'headline' => 'Headline',
+			'tooltip' => 'Tooltip',
 		);
 	}
 
@@ -81,6 +86,8 @@ class Course extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('word',$this->word,true);
+		$criteria->compare('headline',$this->headline,true);
+		$criteria->compare('tooltip',$this->tooltip,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
