@@ -70,8 +70,12 @@ class UniverseController extends Controller
 	{
 		if ( isset ( $GLOBALS["HTTP_RAW_POST_DATA"] )) 
 		{
+			$total = Universe::model()->findAll('fbid=:fbid order by id desc', array(':fbid'=>$this->facebook->getFbid()));
+			
+			
+			
 		    //the image file name   
-		    $fileName = 'images/temp/'. $this->facebook->getFbid() . '.jpg';
+		    $fileName = 'images/created_universe/'. $this->facebook->getFbid() . '_' . $total[0]['id'] . '.jpg';
 		
 		    // get the binary stream
 		    $im = $GLOBALS["HTTP_RAW_POST_DATA"];
@@ -96,6 +100,50 @@ class UniverseController extends Controller
 	}
 	
 	
+	public function actionPhoto($id)
+	{
+		$img = file_get_contents('https://graph.facebook.com/' . $id . '/picture?type=square');
+		echo $img;
+		// $fbid = $this->facebook->getFbid();
+		// $fbid=$id;
+// 		
+		// $fileName = "images/fb_profiles/" . $fbid . "_profile.jpg";
+		// $img = file_get_contents('https://graph.facebook.com/' . $fbid . '/picture?type=normal');
+		 //write it
+	 //   $fp = fopen($fileName, 'wb');
+	   // fwrite($fp, $img);
+	   // fclose($fp);
+		//file_put_contents($file, $img);
+	}
+	
+	public function actionSave()
+	{
+		$_POST['fbid'] = $this->facebook->getFbid();
+		$universe = new Universe;
+		$universe->attributes = $_POST;
+		$_SESSION['test'] = '';
+		$_SESSION['error'] = '';
+		if( $universe->validate() && $universe->save() )
+		{
+			
+			//echo ' done';
+		}
+		else
+		{
+			$_SESSION['error'] = $universe->getErrors();
+			//echo 'error';
+		}
+		
+		$_SESSION['test'] = $_POST;
+		
+	}
+	
+	public function actionTest()
+	{
+		// print_r($_SESSION);
+	}
+	
+	/****************************************************************************************/
 	
 	
 	public function actionCampus()
@@ -114,7 +162,11 @@ class UniverseController extends Controller
 	
 	public function actionCreate()
 	{
-		$this->render('create');
+		$data['fbid']=$this->facebook->getFbid();
+		$user = User::model()->findByPk($data['fbid']);
+		$data['name'] = $user['name'];
+		
+		$this->render('create', array('data'=>$data));
 	}
 	
 	public function actionCourse()

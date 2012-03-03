@@ -5424,3 +5424,329 @@ Stack trace:
 REQUEST_URI=/universe/inti.swf
 HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/universe/create
 ---
+2012/03/02 00:02:09 [error] [php] fopen(images/temp/0.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:80)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/finish
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (80)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/02 00:02:29 [error] [php] fopen(images/temp/0.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:80)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/finish
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (80)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 16:35:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "graph.facebook.com/552072128/picture".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('graph.facebook....')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=//graph.facebook.com/552072128/picture?type=normal
+---
+2012/03/03 16:35:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "graph.facebook.com/552072128/picture".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('graph.facebook....')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=//graph.facebook.com/552072128/picture?type=normal
+---
+2012/03/03 16:35:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "graph.facebook.com/552072128/picture".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('graph.facebook....')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=//graph.facebook.com/552072128/picture?type=normal
+---
+2012/03/03 17:19:19 [error] [php] file_put_contents(/552072128.jpg) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: Permission denied (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:106)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/photo
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (106)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 17:19:38 [error] [php] file_put_contents(/images/temp/552072128_profile.jpg) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:106)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/photo
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (106)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 17:21:33 [error] [php] file_put_contents(/Users/alfredtan/Sites/inti.dev/protected/controllers/images/temp/552072128_profile.jpg) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:106)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/photo
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (106)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 17:21:51 [error] [php] file_put_contents(/images/temp/552072128_profile.jpg) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:106)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/photo
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (106)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 17:22:38 [error] [php] file_put_contents(/images/temp/552072128_profile.jpg) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:106)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/photo
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (106)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 17:24:53 [error] [php] fopen(/images/temp/552072128_profile.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:107)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/photo
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (107)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 17:25:10 [error] [php] Undefined variable: im (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:108)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/photo
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (108)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 17:25:35 [error] [php] fopen(/images/temp/552072128_profile.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:107)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/photo
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (107)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 17:32:21 [error] [php] Undefined variable: exclude_ids (/Users/alfredtan/Sites/inti.dev/protected/views/universe/create.php:33)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(132): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionCreate()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/create
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/create.php (33)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (132)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 17:55:47 [error] [php] Object of class User could not be converted to string (/Users/alfredtan/Sites/inti.dev/protected/views/universe/create.php:46)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(134): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionCreate()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/create
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/create.php (46)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (134)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 18:44:53 [error] [php] Undefined variable: fbid (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:101)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/photo/553887054
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (101)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 18:45:02 [error] [php] Undefined variable: fbid (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:101)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/photo/553887054
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (101)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 18:45:40 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:337
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('photo')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/photo')
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/universe/photo/100003586987625
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/swf/inti.swf
+---
+2012/03/03 18:45:40 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:337
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('photo')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/photo')
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/universe/photo/553887054
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/swf/inti.swf
+---
+2012/03/03 18:46:03 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:337
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('photo')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/photo')
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/universe/photo/553887054
+---
+2012/03/03 18:46:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:337
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('photo')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/photo')
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/universe/photo/553887054
+---
+2012/03/03 19:24:27 [warning] [application] Failed to set unsafe attribute "thelifeId" of "Universe".
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (119)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 19:24:27 [error] [exception.CException] exception 'CException' with message 'Universe and its behaviors do not have a method or closure named "validated".' in /Users/alfredtan/Sites/yii_framework/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/ar/CActiveRecord.php(226): CComponent->__call('validated', Array)
+#1 [internal function]: CActiveRecord->__call('validated', Array)
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(120): Universe->validated()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionSave()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('save')
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/save')
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#11 {main}
+REQUEST_URI=/universe/save
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/swf/inti.swf
+---
+2012/03/03 19:24:35 [error] [exception.CException] exception 'CException' with message 'Universe and its behaviors do not have a method or closure named "validated".' in /Users/alfredtan/Sites/yii_framework/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/ar/CActiveRecord.php(226): CComponent->__call('validated', Array)
+#1 [internal function]: CActiveRecord->__call('validated', Array)
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(120): Universe->validated()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionSave()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('save')
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/save')
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#11 {main}
+REQUEST_URI=/universe/save
+---
+2012/03/03 19:24:55 [warning] [application] Failed to set unsafe attribute "thelifeId" of "Universe".
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (119)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 19:28:34 [warning] [application] Failed to set unsafe attribute "friend5" of "Universe".
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (119)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 19:28:34 [warning] [application] Failed to set unsafe attribute "friend4" of "Universe".
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (119)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 19:30:09 [warning] [application] Failed to set unsafe attribute "friend4" of "Universe".
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (119)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 19:30:09 [warning] [application] Failed to set unsafe attribute "friend5" of "Universe".
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (119)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 19:43:58 [error] [php] Object of class Universe could not be converted to string (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:149)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (149)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/03 19:44:07 [error] [php] Object of class Universe could not be converted to string (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:149)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (149)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
