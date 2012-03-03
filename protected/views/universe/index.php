@@ -1,16 +1,13 @@
-<?php
 
-?>
-
-<div style="width:100%;height:100%">
-	<div><img src="/images/canvas/app-landing-page_01.jpg" width="945" height="450" border="0"></div>
-    <div><img src="/images/canvas/app-landing-page_02.jpg" width="945" height="350" border="0" usemap="#Map"></div>
-    <div><img src="/images/canvas/app-landing-page_03.jpg" width="945" height="239" border="0"></div>	 
+<div style="width:100%;">
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/app-landing-page_01.jpg" width="945" height="450" >
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/app-landing-page_02.jpg" width="945" height="350" usemap="#Map">
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/app-landing-page_03.jpg" width="945" height="239" />
 </div>
 
 <div id="myModal" class="reveal-modal large">
-			<div><img src="../../../images/canvas/reg-form-header.jpg" width="595" height="95" border="0">
-			<div id="form-msg" style="padding:5px; color:#f00; font-size:14px; font-family:Arial"></div>
+			<div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-form-header.jpg" width="595" height="95" border="0">
+			<div id="form-msg" style="padding:5px; color:#f00; font-size:12px; font-style:italic; font-family:Arial"></div>
             <div>
             	<?php $form=$this->beginWidget('CActiveForm', array(
                     'id'=>'register-form',
@@ -18,23 +15,23 @@
                 )); ?>
             	<table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
-                    <td width="30"><img src="../../../images/canvas/reg-field-name.jpg" width="133" height="25" alt="Name" /></td>
+                    <td width="30"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-field-name.jpg" width="133" height="25" alt="Name" /></td>
                     <td><?php echo $form->textField($model,'name', array('class'=>'', 'value'=>'')); ?></td>
                   </tr>
                   <tr>
-                    <td><img src="../../../images/canvas/reg-field-ic.jpg" width="133" height="25" alt="IC" /></td>
+                    <td><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-field-ic.jpg" width="133" height="25" alt="IC" /></td>
                     <td><?php echo $form->textField($model,'nric', array('class'=>'', 'value'=>'')); ?></td>
                   </tr>
                   <tr>
-                    <td><img src="../../../images/canvas/reg-field-mobile.jpg" width="133" height="25" alt="Mobile" /></td>
+                    <td><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-field-mobile.jpg" width="133" height="25" alt="Mobile" /></td>
                     <td><?php echo $form->textField($model,'mobile', array('class'=>'', 'value'=>'')); ?></td>
                   </tr>
                   <tr>
-                    <td><img src="../../../images/canvas/reg-field-email.jpg" width="133" height="25" alt="Email" /></td>
+                    <td><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-field-email.jpg" width="133" height="25" alt="Email" /></td>
                     <td><?php echo $form->textField($model,'email', array('class'=>'', 'value'=>'')); ?></td>
                   </tr>
                   <tr>
-                    <td><img src="../../../images/canvas/reg-field-location.jpg" width="133" height="32" alt="Email" /></td>
+                    <td><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-field-location.jpg" width="133" height="32" alt="Email" /></td>
                     <td><?php
                 echo CHtml::activeDropDownList( 
                     Campus::model(),
@@ -44,6 +41,10 @@
                     );
                 ?></td>
                   </tr>
+                  <tr>
+                  	<td>&nbsp;</td>
+                  	<td  style="font-family: arial; font-size:11px; color: #666666; font-style: italic"><input type="checkbox" id="tnc" value="true" name="tnc"><label for="tnc">I have read and agreed to the Terms and Conditions</label></td>
+                  </tr>
                  <tr><td colspan="2">&nbsp;</td></tr>
                  <tr>
                  	<td>&nbsp;</td>
@@ -51,8 +52,17 @@
 						'', 
 						CHtml::normalizeUrl(array('universe/register')), 
 						array(
-							'beforeSend'=> 'js:function(){
-								$("#form-msg").html("Please wait...");
+							'beforeSend'=> 'js:function()
+							{
+								if($("#tnc:checked").val()=="true")
+								{
+									$("#form-msg").html("Please wait...");	
+								}
+								else
+								{
+									$("#form-msg").html("Please agree to the Terms &amp; Conditions.");
+									return false;
+								}
 							}',
 							'success'=> 'js:function(data){onSuccess(data)}',
 							'complete'=> 'js:function(){}'

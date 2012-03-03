@@ -17,13 +17,13 @@ class UniverseController extends Controller
 	
 	public function actionIndex()
 	{
-		$this->facebook->connect();
+		//$this->facebook->connect();
 		
 		$user = User::model()->findByPk($this->facebook->getFbid());
 		
 		if( count($user)==1 )
 		{
-			$this->redirect(Yii::app()->createUrl('universe/create'));
+			//$this->redirect(Yii::app()->createUrl('universe/create'));
 		}
 		
 		//echo $this->facebook->getFbid();
