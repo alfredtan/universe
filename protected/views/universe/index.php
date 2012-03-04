@@ -40,7 +40,7 @@
       </tr>
     </table>
 </div>
-
+<div style="background:#000000; width:935px; padding:5px; text-align:right"><span style="font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#999999;">&copy; Copyright 2012 INTI International University & Colleges. All Rights Reserved.  <a href="javascript:;" onClick="showtnc()" style="color:#999999;">Terms &amp; Conditions</a></span></div>
 <div id="myModal" class="reveal-modal large">
 			<div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-form-header.jpg" width="595" height="95" border="0">
 			<div id="form-msg" style="padding:5px; color:#f00; font-size:12px; font-style:italic; font-family:Arial"></div>

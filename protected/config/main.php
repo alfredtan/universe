@@ -62,15 +62,15 @@ return array(
 		
 		
 		// uncomment the following to use a MySQL database
-		'db'=>array(
+		/*'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=test',
 			'emulatePrepare' => true,
 			'username' => 'mysql_admin',
 			'password' => 'mysql_4dm1n',
 			'charset' => 'utf8',
-		),
+		),*/
 		
-		/*'db'=>array(
+		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=inti',
 			'emulatePrepare' => true,
 			'username' => 'root',
@@ -115,6 +115,7 @@ return array(
 		'facebookAppSecret'=>'a1177a107d36e999b2e5f416b649634c',
 		'facebookAppScope'=>'publish_stream,user_photos',
 		'fanPageUrl'=>'http://www.facebook.com/pages/WooHoos-Test-Fan-Page/139884799379948?sk=app_211113102317615',
+		'appUrl'=>'https://apps.facebook.com/localdevapp/',
 		'feedIcon'=>'http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/images/icon/76x76.png',
 	),
 );

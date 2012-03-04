@@ -37,15 +37,19 @@ class FacebookController extends Controller
 			$token_url = "https://graph.facebook.com/oauth/access_token?"
 			. "client_id=" . Yii::app()->params['facebookAppId'] . "&redirect_uri=" . urlencode(Yii::app()->createAbsoluteUrl('/facebook/authorize'))
 			. "&client_secret=" . Yii::app()->params['facebookAppSecret'] . "&code=" . $code;
-		
+		// echo $token_url . '<BR><BR>';
 			$response = @file_get_contents($token_url);
+			// echo $response . '<BR><BR>';
+			// die($response);
 			$params = null;
 			parse_str($response, $params);
+			
+			$this->facebook->setAccessToken($params['access_token']) ;
 			
 			if($this->facebook->isConnected())
 			{
 				//$this->redirect('/universe');
-				$this->redirect('https://apps.facebook.com/localdevapp/');
+				$this->redirect(Yii::app()->params['appUrl']);
 			}
 			else
 			{

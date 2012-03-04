@@ -2,7 +2,7 @@
 <script type="text/javascript" src="/js/swfobject.js"></script>
 
 <div id="universe_create" style="width:945px; height:806px"></div>
-
+<div style="background:#000000; width:935px; padding:5px; text-align:right"><span style="font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#999999;">&copy; Copyright 2012 INTI International University & Colleges. All Rights Reserved.  <a href="javascript:;" onClick="showtnc()" style="color:#999999;">Terms &amp; Conditions</a></span></div>
 <!-- -->
 
 <div id="myModal" class="reveal-modal large">
@@ -63,7 +63,7 @@
 <!-- -->
 
 <script>
-	var flashvars = {fbid:<?php echo $data['fbid']; ?>, name:'<?php echo $data['name']; ?>'};
+	var flashvars = {fbid:<?php echo $data['fbid']; ?>, name:'<?php echo $data['name']; ?>', gender:'<?php echo $data['gender']; ?>'};
 	var params = {allowScriptAccess:'always', wmode:'transparent'};
 	var attributes = {id:'universe_create', name:'universe_create'};
 
@@ -115,10 +115,10 @@
 	
 	function invite_friends()
 	{
-		var max_recipient_count = 3;
+		var max_recipient_count = 2;
 				
 				
-				FB.ui({method: 'apprequests', display:'popup',
+				FB.ui({method: 'apprequests',
 	          message: "Create your dream campus with courses/interests that you’ve always wanted to pursue,so that you can live the life you’ve always dreamed of and stand a chance to win an iPad 2",
 	          max_recipients:max_recipient_count
 	        }, requestCallback);

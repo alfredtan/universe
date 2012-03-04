@@ -5972,3 +5972,625 @@ REQUEST_URI=/universe/view
 in /Users/alfredtan/Sites/inti.dev/protected/views/universe/view.php (7)
 in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (110)
 in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/04 18:18:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'mysql_admin'@'localhost' (using password: YES)' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CDbHttpSession.php(154): CModule->getComponent('db')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CDbHttpSession.php(206): CDbHttpSession->getDbConnection()
+#5 [internal function]: CDbHttpSession->readSession('2b2d75baf422c7e...')
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CHttpSession.php(115): session_start()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CHttpSession.php(89): CHttpSession->open()
+#8 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(388): CHttpSession->init()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(104): CModule->getComponent('session')
+#10 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(17): CModule->__get('session')
+#11 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(307): UniverseController->beforeAction(Object(CInlineAction))
+#12 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('campus')
+#15 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/campus')
+#16 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#18 {main}
+REQUEST_URI=/universe/campus?0.5841492228209972
+---
+2012/03/04 18:19:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'mysql_admin'@'localhost' (using password: YES)' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CDbHttpSession.php(154): CModule->getComponent('db')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CDbHttpSession.php(206): CDbHttpSession->getDbConnection()
+#5 [internal function]: CDbHttpSession->readSession('9939be8d7493b1c...')
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CHttpSession.php(115): session_start()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CHttpSession.php(89): CHttpSession->open()
+#8 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(388): CHttpSession->init()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(104): CModule->getComponent('session')
+#10 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(17): CModule->__get('session')
+#11 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(307): UniverseController->beforeAction(Object(CInlineAction))
+#12 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('campus')
+#15 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/campus')
+#16 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#18 {main}
+REQUEST_URI=/universe/campus
+---
+2012/03/04 18:19:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'mysql_admin'@'localhost' (using password: YES)' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Users/alfredtan/Sites/yii_framework/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CDbHttpSession.php(154): CModule->getComponent('db')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CDbHttpSession.php(206): CDbHttpSession->getDbConnection()
+#5 [internal function]: CDbHttpSession->readSession('9939be8d7493b1c...')
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CHttpSession.php(115): session_start()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CHttpSession.php(89): CHttpSession->open()
+#8 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(388): CHttpSession->init()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(104): CModule->getComponent('session')
+#10 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(17): CModule->__get('session')
+#11 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(307): UniverseController->beforeAction(Object(CInlineAction))
+#12 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('campus')
+#15 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/campus')
+#16 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#18 {main}
+REQUEST_URI=/universe/campus
+---
+2012/03/04 19:39:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=user&pos=0
+---
+2012/03/04 19:39:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+---
+2012/03/04 19:39:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+---
+2012/03/04 19:39:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/index.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/index.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/index.php?db=test&table=user&target=sql.php&token=da53cabe0ca71c7ebaf197758134c06e
+---
+2012/03/04 19:39:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_
+---
+2012/03/04 19:39:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_
+---
+2012/03/04 19:39:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_
+---
+2012/03/04 19:39:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_
+---
+2012/03/04 19:39:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_
+---
+2012/03/04 19:53:13 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/alfredtan/Sites/inti.dev/protected/controllers/FacebookController.php:40) (/Users/alfredtan/Sites/yii_framework/framework/web/CHttpRequest.php:715)
+Stack trace:
+#0 /Users/alfredtan/Sites/inti.dev/protected/controllers/FacebookController.php(52): FacebookController->redirect()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): FacebookController->actionAuthorize()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): FacebookController->runAction()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): FacebookController->runActionWithFilters()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): FacebookController->run()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/facebook/authorize?state=afb17197717a7790eb610ade5f097c2b&code=AQBkcR4XQTkb89ZJLDjHJZOMdv3LPsxSrkVbIc1LZd3AGFY0Z4BTV1jSRM6pnFt0K66qEMGqXc60jXaB8--QY_L5oPkOymLmg8y6kytm6saNtvVN7RFB1oPJdQW8HGXDmZzyYYjAjSRLep2yA2uBl3nvy9Mw_-nfZgrU-y7HajJo30rvnajVYXVSwwraIpUTbfk
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/FacebookController.php (52)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:38:58 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(255): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (255)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:40:03 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:40:24 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:42:04 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:42:19 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:42:47 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:44:19 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:44:52 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:46:34 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:46:40 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:46:54 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:47:01 [error] [php] Undefined variable: model (/Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php:55)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): UniverseController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): UniverseController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(261): UniverseController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): UniverseController->actionTest()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/test
+in /Users/alfredtan/Sites/inti.dev/protected/views/universe/index.php (55)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (261)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 00:47:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('test')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('test')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/test')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/universe/test
+---
+2012/03/05 00:49:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('test')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('test')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/test')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/universe/test
+HTTP_REFERER=http://apps.facebook.com/localdevapp/test
+---
+2012/03/05 02:31:59 [error] [php] Undefined variable: arr (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:381)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/campus/6/course
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (381)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 02:32:12 [error] [php] Undefined variable: arr (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:381)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/campus/6/course
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (381)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 02:32:15 [error] [php] Undefined variable: arr (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:381)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/campus/6/course
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (381)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 02:32:21 [error] [php] Undefined variable: arr (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:381)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/campus/6/course
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (381)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/05 02:32:35 [error] [exception.CException] exception 'CException' with message 'Property "ViewCampusCourse.0" is not defined.' in /Users/alfredtan/Sites/yii_framework/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/ar/CActiveRecord.php(144): CComponent->__get('0')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CModel.php(593): CActiveRecord->__get('0')
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(381): CModel->offsetGet(0)
+#3 [internal function]: UniverseController->actionCourseByCampus('6')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UniverseController), Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UniverseController), Object(ReflectionMethod), Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('coursebycampus')
+#10 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/course...')
+#11 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#13 {main}
+REQUEST_URI=/universe/campus/6/course
+---
+2012/03/05 02:32:41 [error] [exception.CException] exception 'CException' with message 'Property "ViewCampusCourse.0" is not defined.' in /Users/alfredtan/Sites/yii_framework/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/ar/CActiveRecord.php(144): CComponent->__get('0')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CModel.php(593): CActiveRecord->__get('0')
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(381): CModel->offsetGet(0)
+#3 [internal function]: UniverseController->actionCourseByCampus('6')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UniverseController), Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UniverseController), Object(ReflectionMethod), Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('coursebycampus')
+#10 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/course...')
+#11 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#13 {main}
+REQUEST_URI=/universe/campus/6/course
+---
+2012/03/05 02:32:50 [error] [exception.CException] exception 'CException' with message 'Property "ViewCampusCourse.0" is not defined.' in /Users/alfredtan/Sites/yii_framework/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/ar/CActiveRecord.php(144): CComponent->__get('0')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CModel.php(593): CActiveRecord->__get('0')
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php(381): CModel->offsetGet(0)
+#3 [internal function]: UniverseController->actionCourseByCampus('6')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(UniverseController), Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(UniverseController), Object(ReflectionMethod), Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('coursebycampus')
+#10 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('universe/course...')
+#11 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#13 {main}
+REQUEST_URI=/universe/campus/6/course
+---
+2012/03/05 02:37:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "_pma_/sql.php".' in /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('_pma_/sql.php')
+#1 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=course&pos=0
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/navigation.php?token=da53cabe0ca71c7ebaf197758134c06e&db=test
+---

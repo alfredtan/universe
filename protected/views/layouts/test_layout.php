@@ -1,6 +1,7 @@
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
 	<head>
 		<title><?php echo CHtml::encode(Yii::app()->name); ?></title>
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
@@ -12,7 +13,16 @@
 			{
 				margin:0px;
 				padding:0px;
-				width:497px;
+				
+			}
+			
+			#yt0
+			{
+				background:url(../images/canvas/button-submit.jpg) no-repeat;
+				height:39px;
+				width:149px;
+				border:none;
+				cursor:pointer;
 			}
 			
 			#tncModal
@@ -26,7 +36,7 @@
 			
 			#tncModal #container
 			{
-				height:500px;
+				height:350px;
 				overflow:auto;
 				margin:10px 0px 10px 0px;
 			}
@@ -36,6 +46,14 @@
 				line-height:100%;
 				margin:0px 0px 15px 0px;
 				padding:0px;
+			}
+			
+			#tncModal h1
+			{
+				margin:0px 0px 10px 0px;
+				padding:0px;
+				font-size:18px;
+				line-height:100%;
 			}
 			
 			#tncModal h3
@@ -55,40 +73,14 @@
 		</style>
 	</head>
 	<body>
-		<div id="wrapper">
-				<table width="494" border="0" cellspacing="0" cellpadding="0">
-			  <tr>
-			    <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_01.png" width="494" height="281" /></td>
-			  </tr>
-			  <tr>
-			    <td align="left" valign="top"><table width="494" border="0" cellspacing="0" cellpadding="0">
-			      <tr>
-			        <td width="62" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_02.png" width="62" height="55" /></td>
-			        <td width="152" align="left" valign="top"><a target="_top" href="<?php echo Yii::app()->params['appUrl']; ?>"><img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_03.png" width="152" height="55" /></a></td>
-			        <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_04.png" width="280" height="55" /></td>
-			      </tr>
-			    </table></td>
-			  </tr>
-			  <tr>
-			    <td align="left" valign="top"><table width="494" border="0" cellspacing="0" cellpadding="0">
-			      <tr>
-			        <td width="62" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_05.png" width="62" height="21" /></td>
-			        <td width="152" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_06.png" width="152" height="21" /></td>
-			        <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_07.png" width="280" height="21" /></td>
-			      </tr>
-			    </table></td>
-			  </tr>
-			  <tr>
-			    <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_08.jpg" width="494" height="402" /></td>
-			  </tr>
-			  <tr>
-			    <td height="20" align="center" valign="middle" bgcolor="#000000"><span style="font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#999999;">&copy; Copyright 2012 INTI International University & Colleges. All Rights Reserved.  <a href="javascript:;" onClick="showtnc()" style="color:#999999;">Terms & Conditions</a></span></td>
-			  </tr>
-			</table>
-		</div>
-		<div id="tncModal" class="reveal-modal small">
+		
+		<div id="fb-root"></div>
+			<?php echo $content; ?>
+            
+        <div id="tncModal" class="reveal-modal large">
           	<div id="container">
-            	<p>This "Uni-Verse" ("Contest") is organized by INTI International University & Colleges (""INTI"). INTI is also the administrator for the Contest. By registering to take part in this Contest, the person doing so shall be taken to have fully and unconditionally agreed to be bound by the terms and conditions stated hereinafter:</p>
+          		<h1>Terms &amp; Conditions</h1>
+            	<p>This "Uni-Verse" ("Contest") is organized by INTI International University &amp; Colleges (""INTI"). INTI is also the administrator for the Contest. By registering to take part in this Contest, the person doing so shall be taken to have fully and unconditionally agreed to be bound by the terms and conditions stated hereinafter:</p>
             <h3>Eligibility</h3>
             <p>No purchase or payment is required to participate in this Contest. The Contest is open to all SPM, STPM & UEC 2011 exam leavers whom are registered participants at fb.com/inti.edu ("Participant") other than the employees of INTI and their immediate families, INTI's associated agencies (advertising and promotion agents), and their immediate families. The Participant must be citizens or permanent residents of Malaysia above the age of eighteen (18) years with a valid National Registration Identification Card (“NRIC”) number (12-digit) at the time of participation of the Contest. Participant under the age of eighteen (18) must seek parental and/or guardian approval to participate.</p>
             
@@ -141,9 +133,51 @@
             </div>
               <a class="close-reveal-modal">&#215;</a>
         </div>
-		<?php echo $content; ?>
-        <script>
-		function showtnc()
+		
+<script>
+
+	
+	/********************* FACEBOOK INIT ************************/
+	
+	// standard facebook init stuff
+  window.fbAsyncInit = function() {
+    	FB.init(
+    	{
+    		appId: '<?php echo Yii::app()->params['facebookAppId']; ?>', 
+    		status: true, 
+    		cookie: true,
+    		oauth:  true,
+			channelUrl : '://<?php echo $_SERVER['HTTP_HOST']; ?>/channel.html' // Channel File
+			}
+		);
+		//FB.Canvas.setSize({height: 1500});
+		//FB.Canvas.setAutoResize(7);
+		FB.Canvas.setAutoGrow();
+		
+		// add function here to trigger after FB.init completes
+  };
+  
+	(function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+	
+	function fb_share()
+	{
+		var obj = {
+		          method: 'feed',
+		          link: '<?php echo Yii::app()->params['fanPageUrl']; ?>',
+		          picture: '<?php echo Yii::app()->params['feedIcon']; ?>',
+		          name: "Shape your future with INTIs 'It's Your Uni-Verse!",
+		          caption: "Create your dream campus with courses and interests that you’ve always wanted to pursue, so that you can live the life you’ve always dreamed of and stand a chance to win an iPad 2, a Fujifilm Instax Mini 7s Polaroid Camera or tickets to your favourite movies"
+		        };
+		    FB.ui(obj,function(){});
+	}
+	
+	function showtnc()
 	{
 			$('#tncModal').reveal({
 			     animation: 'none',                   //fade, fadeAndPop, none
@@ -152,6 +186,8 @@
 			});
 			//Custom.init();
 	}
-	</script>
+
+</script>
+
 	</body>
 </html>

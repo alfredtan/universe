@@ -163,7 +163,32 @@ class UniverseController extends Controller
 		}
 	}
 
+	public function actionUp()
+	{
+		try{
+			$this->facebook->connect();
+			$universe = $this->getLatestUniverse();
+			if( count($universe)==0 ) return;
+			
+			$file= 'images/created_universe/' . $this->facebook->getFbid() . '_' . $universe['id'] . '.jpg';
+			
+			$args = array(
+			        'message' => $this->getMessage() . '
 
+			        Find out how you can create your own Uni-verse here and stand a chance to win an iPad 2 and other great prizes!
+			        ' . Yii::app()->params['appUrl'],
+			        'source' => '@' . realpath($file)
+			        );
+	
+			$resp = $this->facebook->uploadPhoto($args);
+		}
+		catch( Exception $e)
+		{
+			// if there's an error, most probably it is permsision issue. ignore it
+			echo $e->getMessage();
+			die();
+		}
+	}
 
 	//In your Uni-verse,you are a World traveling Entrepreneur who enjoys badminton at the beach on the weekends with your chess crew, friends
 	public function uploadImageToFacebook()
@@ -249,16 +274,13 @@ class UniverseController extends Controller
 		
 	}
 	
-	public function actionTest()
-	{
-		// print_r($_SESSION);
-	}
-	
 	public function actionCreate()
 	{
+		$this->facebook->connect();
 		$data['fbid']=$this->facebook->getFbid();
 		$user = User::model()->findByPk($data['fbid']);
 		$data['name'] = $user['name'];
+		$data['gender'] = $this->facebook->fbuser['gender'];
 		
 		$this->render('create', array('data'=>$data));
 	}

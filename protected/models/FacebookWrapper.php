@@ -55,6 +55,11 @@ class FacebookWrapper
 		);
 	}
 	
+	public function setAccessToken($s)
+	{
+		$this->facebook->setAccessToken($s);
+	}
+	
 	public function getAccessToken()
 	{
 		return $this->facebook->getAccessToken();
@@ -69,6 +74,7 @@ class FacebookWrapper
 	    }
 		catch (FacebookApiException $e) 
 	    {
+	    	die($e->getMessage());
 	        return false;
 	    }
 	}
