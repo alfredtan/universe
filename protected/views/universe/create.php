@@ -118,7 +118,7 @@
 		var max_recipient_count = 3;
 				
 				
-				FB.ui({method: 'apprequests',
+				FB.ui({method: 'apprequests', display:'popup',
 	          message: "message goes here",
 	          max_recipients:max_recipient_count,
 	        }, requestCallback);

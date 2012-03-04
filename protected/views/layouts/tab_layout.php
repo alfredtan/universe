@@ -18,10 +18,37 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<div><a target="_top" href="https://apps.facebook.com/localdevapp/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-01.jpg" width="497" height="250" border="0"></a></div>
-			<div><a target="_top" href="https://apps.facebook.com/localdevapp/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-02.jpg" width="497" height="250" border="0"></a></div>
-			<div><a target="_top" href="https://apps.facebook.com/localdevapp/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-03.jpg" width="497" height="260" border="0"></a></div>
+				<table width="494" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_01.png" width="494" height="281" /></td>
+			  </tr>
+			  <tr>
+			    <td align="left" valign="top"><table width="494" border="0" cellspacing="0" cellpadding="0">
+			      <tr>
+			        <td width="62" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_02.png" width="62" height="55" /></td>
+			        <td width="152" align="left" valign="top"><a target="_top" href="https://apps.facebook.com/localdevapp/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_03.png" width="152" height="55" /></a></td>
+			        <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_04.png" width="280" height="55" /></td>
+			      </tr>
+			    </table></td>
+			  </tr>
+			  <tr>
+			    <td align="left" valign="top"><table width="494" border="0" cellspacing="0" cellpadding="0">
+			      <tr>
+			        <td width="62" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_05.png" width="62" height="21" /></td>
+			        <td width="152" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_06.png" width="152" height="21" /></td>
+			        <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_07.png" width="280" height="21" /></td>
+			      </tr>
+			    </table></td>
+			  </tr>
+			  <tr>
+			    <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_08.jpg" width="494" height="402" /></td>
+			  </tr>
+			  <tr>
+			    <td height="20" align="center" valign="middle" bgcolor="#000000"><span style="font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#999999;">© Copyright 2012 INTI International University & Colleges. All Rights Reserved.  <a href="#" style="color:#999999;">Terms & Conditions</a></span></td>
+			  </tr>
+			</table>
 		</div>
+		
 		<?php echo $content; ?>
 	</body>
 </html>

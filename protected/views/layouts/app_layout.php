@@ -59,7 +59,18 @@
      ref.parentNode.insertBefore(js, ref);
    }(document));
 	
-	
+	function fb_share()
+	{
+		var obj = {
+		          method: 'feed',
+		          link: '<?php echo Yii::app()->params['fanPageUrl']; ?>',
+		          picture: '<?php echo Yii::app()->params['feedIcon']; ?>',
+		          name: 'Snap Your Free Rooms from AsiaRooms.com',
+		          caption: "Just snap some photos on the virtual instant camera, and snap more when you win 2-night room stays with breakfasts, transfers and/or spa packages. There's a prize every week, for 12 weeks!",
+		        };
+		    FB.ui(obj,function(){});
+	}
+
 </script>
 
 	</body>
