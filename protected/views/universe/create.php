@@ -75,7 +75,7 @@
 			$('#myModal').reveal({
 			     animation: 'none',                   //fade, fadeAndPop, none
 			     animationspeed: 300,                       //how fast animtions are
-			     closeonbackgroundclick: false,              //if you click background will modal close?
+			     closeonbackgroundclick: false              //if you click background will modal close?
 			});
 			//Custom.init();
 	}
@@ -119,8 +119,8 @@
 				
 				
 				FB.ui({method: 'apprequests', display:'popup',
-	          message: "message goes here",
-	          max_recipients:max_recipient_count,
+	          message: "Create your dream campus with courses/interests that you’ve always wanted to pursue,so that you can live the life you’ve always dreamed of and stand a chance to win an iPad 2",
+	          max_recipients:max_recipient_count
 	        }, requestCallback);
 	}
 	

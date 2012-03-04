@@ -44,13 +44,18 @@
     		status: true, 
     		cookie: true,
     		oauth:  true,
-			xfbml: true,
-			channelUrl : 'http://<?php echo $_SERVER['HTTP_HOST']; ?>/channel.html', // Channel File
+			xfbml: true
+			//channelUrl : '://<?php echo $_SERVER['HTTP_HOST']; ?>/channel.html' // Channel File
 			}
 		);
+		
 		FB.Canvas.setAutoGrow();
+		FB.UIServer.setLoadedNode = function (a, b) { 
+		  FB.UIServer._loadedNodes[a.id] = b; 
+		}
 		// add function here to trigger after FB.init completes
   };
+  
 	(function(d){
      var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
      if (d.getElementById(id)) {return;}
@@ -63,10 +68,11 @@
 	{
 		var obj = {
 		          method: 'feed',
+				  display: 'popup',
 		          link: '<?php echo Yii::app()->params['fanPageUrl']; ?>',
 		          picture: '<?php echo Yii::app()->params['feedIcon']; ?>',
-		          name: 'Snap Your Free Rooms from AsiaRooms.com',
-		          caption: "Just snap some photos on the virtual instant camera, and snap more when you win 2-night room stays with breakfasts, transfers and/or spa packages. There's a prize every week, for 12 weeks!",
+		          name: "Shape your future with INTIs 'It's Your Uni-Verse!",
+		          caption: "Create your dream campus with courses and interests that you’ve always wanted to pursue, so that you can live the life you’ve always dreamed of and stand a chance to win an iPad 2, a Fujifilm Instax Mini 7s Polaroid Camera or tickets to your favourite movies"
 		        };
 		    FB.ui(obj,function(){});
 	}

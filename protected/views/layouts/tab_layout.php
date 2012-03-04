@@ -26,7 +26,7 @@
 			    <td align="left" valign="top"><table width="494" border="0" cellspacing="0" cellpadding="0">
 			      <tr>
 			        <td width="62" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_02.png" width="62" height="55" /></td>
-			        <td width="152" align="left" valign="top"><a target="_top" href="https://apps.facebook.com/localdevapp/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_03.png" width="152" height="55" /></a></td>
+			        <td width="152" align="left" valign="top"><a target="_top" href="https://apps.facebook.com/localdevapp/"><img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_03.png" width="152" height="55" /></a></td>
 			        <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_04.png" width="280" height="55" /></td>
 			      </tr>
 			    </table></td>

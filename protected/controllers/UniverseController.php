@@ -26,10 +26,18 @@ class UniverseController extends Controller
 		// die($this->facebook->getAccessToken());
 		
 		$user = User::model()->findByPk($this->facebook->getFbid());
-		
+		$universe = $this->getLatestUniverse();
 		if( count($user)==1 )
 		{
-			$this->redirect(Yii::app()->createUrl('universe/create'));
+			if( count($universe) == 0 )
+			{
+			$this->redirect(Yii::app()->createUrl('universe/create'));				
+			}
+			else
+			{
+			$this->redirect(Yii::app()->createUrl('universe/view'));
+				
+			}
 		}
 		
 		//echo $this->facebook->getFbid();
@@ -255,6 +263,23 @@ class UniverseController extends Controller
 		$this->render('create', array('data'=>$data));
 	}
 	
+	public function actionLatest()
+	{
+		//$this->facebook->connect();
+		$fbid=$this->facebook->getFbid();
+		$uni = $this->getLatestUniverse();
+		$message = $this->getMessage();
+		$user = User::model()->findByPk($fbid);
+		
+		$this->layout='//layouts/xml_layout';
+		$this->render('xml_uni', array(
+			'fbid'=>$fbid,
+			'uni_id'=>$uni['id'],
+			'name'=>$user['name'],
+			'message'=>$message
+		));
+	}
+	
 	/****************************************************************************************/
 	
 	
@@ -304,7 +329,7 @@ class UniverseController extends Controller
 			$data[$id]['tooltip']=$arr['tooltip'];
 		}
 		$this->layout='//layouts/xml_layout';
-		$this->render('xml', array('data'=>$data, 'type'=>'campus'));
+		$this->render('xml', array('data'=>$data, 'type'=>'interest'));
 	}
 	
 	public function actionLife()
@@ -320,7 +345,7 @@ class UniverseController extends Controller
 			$data[$id]['tooltip']=$arr['tooltip'];
 		}
 		$this->layout='//layouts/xml_layout';
-		$this->render('xml', array('data'=>$data, 'type'=>'campus'));
+		$this->render('xml', array('data'=>$data, 'type'=>'life'));
 	}
 	
 	public function actionCourseByCampus($id)

@@ -17,14 +17,14 @@
             </table></td>
             <td width="73" align="left" valign="top"><table width="73" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td align="left" valign="top"><a href="javascript:;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/app-page_03.jpg" width="73" height="38" /></a></td>
+                <td align="left" valign="top"><a href="javascript:;" onclick="fb_share()"><img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/app-page_03.jpg" width="73" height="38" /></a></td>
               </tr>
               <tr>
                 <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/app-page_08.jpg" width="73" height="62" /></td>
               </tr>
             </table></td>
             <td width="89" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/app-page_04.jpg" width="89" height="100" /></td>
-            <td width="214" align="left" valign="top"><a href="javascript:;" onclick="reveal_registration()"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/app-page_05.jpg" width="214" height="100" /></a></td>
+            <td width="214" align="left" valign="top"><a href="javascript:;" onclick="reveal_registration()"><img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/app-page_05.jpg" width="214" height="100" /></a></td>
             <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/app-page_06.jpg" width="99" height="100" /></td>
           </tr>
         </table></td>
@@ -122,7 +122,7 @@
 			$('#myModal').reveal({
 			     animation: 'fade',                   //fade, fadeAndPop, none
 			     animationspeed: 300,                       //how fast animtions are
-			     closeonbackgroundclick: false,              //if you click background will modal close?
+			     closeonbackgroundclick: false            //if you click background will modal close?
 			});
 			//Custom.init();
 	}
