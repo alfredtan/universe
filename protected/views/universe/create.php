@@ -5,8 +5,8 @@
 <div style="background:#000000; width:935px; padding:5px; text-align:right"><span style="font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#999999;">&copy; Copyright 2012 INTI International University & Colleges. All Rights Reserved.  <a href="javascript:;" onClick="showtnc()" style="color:#999999;">Terms &amp; Conditions</a></span></div>
 <!-- -->
 
-<div id="myModal" class="reveal-modal large">
-			<div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/pop-quiz-header.jpg" width="300" height="60" border="0">
+		<div id="myModal" class="reveal-modal large">
+			<div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/pop-quiz-header.jpg" width="300" height="60" border="0"></div>
 			<div id="form-msg" style="padding:5px; color:#f00; font-size:12px; font-style:italic; font-family:Arial"></div>
             <div>
             	<?php $form=$this->beginWidget('CActiveForm', array(

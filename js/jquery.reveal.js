@@ -97,6 +97,7 @@
 					lockModal();
 					if(options.animation == "fadeAndPop") {
 						modalBG.delay(options.animationspeed).fadeOut(options.animationspeed);
+						console.log(modal)
 						modal.animate({
 							"top":  $(document).scrollTop()-topOffset + 'px',
 							"opacity" : 0
@@ -116,7 +117,12 @@
 					}  	
 					if(options.animation == "none") {
 						modal.css({'visibility' : 'hidden', 'top' : topMeasure});
-						modalBG.css({'display' : 'none'});	
+						
+						// hack
+						if($("#regModal").css('visibility') != 'visible')
+						{
+							modalBG.css({'display' : 'none'});	
+						}
 					}		
 				}
 				modal.unbind('reveal:close');
@@ -140,7 +146,7 @@
 				});
 			}
 			$('body').keyup(function(e) {
-        		if(e.which===27){ modal.trigger('reveal:close'); } // 27 is the keycode for the Escape key
+        		//if(e.which===27){ modal.trigger('reveal:close'); } // 27 is the keycode for the Escape key
 			});
 			
 			

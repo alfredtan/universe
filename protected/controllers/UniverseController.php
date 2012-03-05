@@ -50,6 +50,10 @@ class UniverseController extends Controller
 		
 		if( Yii::app()->request->isAjaxRequest )
 		{
+			$user = User::model()->findbyPk($this->facebook->getFbid());
+			if(count($user)){ return; }
+			
+			
 			$model = new User;
 			// for User
 			$_POST['User']['fbid']=$this->facebook->getFbid();

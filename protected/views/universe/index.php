@@ -41,8 +41,8 @@
     </table>
 </div>
 <div style="background:#000000; width:935px; padding:5px; text-align:right"><span style="font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#999999;">&copy; Copyright 2012 INTI International University & Colleges. All Rights Reserved.  <a href="javascript:;" onClick="showtnc()" style="color:#999999;">Terms &amp; Conditions</a></span></div>
-<div id="myModal" class="reveal-modal large">
-			<div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-form-header.jpg" width="595" height="95" border="0">
+<div id="regModal" class="reveal-modal large">
+			<div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-form-header.jpg" width="595" height="95" border="0"></div>
 			<div id="form-msg" style="padding:5px; color:#f00; font-size:12px; font-style:italic; font-family:Arial"></div>
             <div>
             	<?php $form=$this->beginWidget('CActiveForm', array(
@@ -56,11 +56,11 @@
                   </tr>
                   <tr>
                     <td><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-field-ic.jpg" width="133" height="25" alt="IC" /></td>
-                    <td><?php echo $form->textField($model,'nric', array('class'=>'', 'value'=>'')); ?></td>
+                    <td><?php echo $form->textField($model,'nric', array('class'=>'', 'value'=>'', 'maxlength'=>12)); ?> <span style="font-family: Arial; font-size: 12px; color: #666">(without dashes)</span></td>
                   </tr>
                   <tr>
                     <td><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-field-mobile.jpg" width="133" height="25" alt="Mobile" /></td>
-                    <td><?php echo $form->textField($model,'mobile', array('class'=>'', 'value'=>'')); ?></td>
+                    <td><?php echo $form->textField($model,'mobile', array('class'=>'', 'value'=>'', 'maxlength'=>10)); ?> <span style="font-family: Arial; font-size: 12px; color: #666">01XXXXXXXXX</span></td>
                   </tr>
                   <tr>
                     <td><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-field-email.jpg" width="133" height="25" alt="Email" /></td>
@@ -79,7 +79,7 @@
                   </tr>
                   <tr>
                   	<td>&nbsp;</td>
-                  	<td  style="font-family: arial; font-size:11px; color: #666666; font-style: italic"><input type="checkbox" id="tnc" value="true" name="tnc"><label for="tnc">I have read and agreed to the Terms and Conditions</label></td>
+                  	<td  style="font-family: arial; font-size:11px; color: #666666; font-style: italic"><input type="checkbox" id="tnc" value="true" name="tnc"><label for="tnc">I have read and agreed to the <a href="javascript:;" onClick="showtnc('register')" style="color:#999999;">Terms &amp; Conditions</a></label></td>
                   </tr>
                  <tr><td colspan="2">&nbsp;</td></tr>
                  <tr>
@@ -92,7 +92,17 @@
 							{
 								if($("#tnc:checked").val()=="true")
 								{
-									$("#form-msg").html("Please wait...");	
+									var yy = $("#User_nric").val().substr(0,2);
+									if( yy>94 )
+									{
+										$("#form-msg").html("Sorry, you must be 18 years old and above to participate.");
+										return false;
+										
+									}
+									else
+									{
+										$("#form-msg").html("Please wait...");
+									}	
 								}
 								else
 								{
@@ -111,7 +121,7 @@
 				<br><br>
 				
 				
-			<a class="close-reveal-modal">&#215;</a>
+			<a javascript:; onclick="$('#regModal').trigger('reveal:close');" class="" style="font-size: 22px; line-height.5; position: absolute; top: 8px; right:11px; color:#aaa; font-weight: bold; cursor: pointer">&#215;</a>
 		</div>
 		
 
@@ -119,7 +129,7 @@
 	
 	function reveal_registration()
 	{
-			$('#myModal').reveal({
+			$('#regModal').reveal({
 			     animation: 'fade',                   //fade, fadeAndPop, none
 			     animationspeed: 300,                       //how fast animtions are
 			     closeonbackgroundclick: false            //if you click background will modal close?
@@ -144,6 +154,7 @@
 		{
 			//alert('yay');
 			$("#form-msg").html('Successful!');
+			$("#yt0").hide()
 			location.href='<?php echo Yii::app()->createUrl('universe/create'); ?>';
 		}
 	}

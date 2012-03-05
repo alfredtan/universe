@@ -76,6 +76,8 @@
 		
 		<div id="fb-root"></div>
 		<?php echo $content; ?>
+        
+        
             
         <div id="tncModal" class="reveal-modal large">
           	<div id="container">
@@ -131,7 +133,7 @@
               <p>The information you provide to the INTI International University & Colleges (INTI) will be processed in accordance with the provisions of the Personal Data Protection Act (1998) and any other relevant legislation.</p>
               <p>This data may be used to provide you with further information about relevant services. It may be held on a mailing list or database for this purpose, unless you object (by notifying the University in writing); this data may also be used by INTI for publicity, promotional and marketing purpose and it may also be passed on to a third party (a ‘data processor’) with whom the University has formally contracted to process your data for this purpose, subject to the safeguards concerning privacy and security of data set out in the Act.</p>
             </div>
-              <a class="close-reveal-modal">&#215;</a>
+              <a javascript:; onclick="hidetnc()" class="" style="font-size: 22px; line-height.5; position: absolute; top: 8px; right:11px; color:#aaa; font-weight: bold; cursor: pointer">&#215;</a>
         </div>
 		
 <script>
@@ -177,14 +179,29 @@
 		    FB.ui(obj,function(){});
 	}
 	
-	function showtnc()
+	var referrer='';
+	function showtnc(_ref)
 	{
+		referrer=_ref;
 			$('#tncModal').reveal({
 			     animation: 'none',                   //fade, fadeAndPop, none
 			     animationspeed: 300,                       //how fast animtions are
 			     closeonbackgroundclick: false              //if you click background will modal close?
 			});
 			//Custom.init();
+	}
+	
+	function hidetnc()
+	{
+		referrer='';
+		if( referrer == 'register')
+		{
+			$("#tncModal").css('visibility:hidden');
+		}
+		else
+		{
+			$('#tncModal').trigger('reveal:close');
+		}
 	}
 
 </script>
