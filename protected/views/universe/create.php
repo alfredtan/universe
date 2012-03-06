@@ -119,7 +119,7 @@
 				
 				
 				FB.ui({method: 'apprequests',
-	          message: "Create your dream campus with courses/interests that you’ve always wanted to pursue,so that you can live the life you’ve always dreamed of and stand a chance to win an iPad 2",
+	          message: "Create your dream campus with courses/interests that you've always wanted to pursue,so that you can live the life you've always dreamed of and stand a chance to win an iPad 2",
 	          max_recipients:max_recipient_count
 	        }, requestCallback);
 	}

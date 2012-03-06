@@ -93,9 +93,9 @@
 								if($("#tnc:checked").val()=="true")
 								{
 									var yy = $("#User_nric").val().substr(0,2);
-									if( yy>94 )
+									if( yy!=94 )
 									{
-										$("#form-msg").html("Sorry, you must be 18 years old and above to participate.");
+										$("#form-msg").html("Oops, this is for SPM 2011 leavers only. <br>If you like to know more about INTI and our courses, please visit <a href=\"http://www.newinti.edu.my/main/request-information\" target=\"_blank\">here</a>.");
 										return false;
 										
 									}
@@ -134,6 +134,7 @@
 			     animationspeed: 300,                       //how fast animtions are
 			     closeonbackgroundclick: false            //if you click background will modal close?
 			});
+			_trackga('/universe/register');
 			//Custom.init();
 	}
 	
@@ -152,10 +153,10 @@
 		}
 		else if ( d.status =='success')
 		{
-			//alert('yay');
+			_trackga( '/universe/register/success');
 			$("#form-msg").html('Successful!');
 			$("#yt0").hide()
-			location.href='<?php echo Yii::app()->createUrl('universe/create'); ?>';
+			location.href='/universe/create';
 		}
 	}
 </script>

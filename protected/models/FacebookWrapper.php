@@ -96,7 +96,7 @@ class FacebookWrapper
 	 
 	public function getFbid()
 	{
-		
+		// return 552072128;	
 		return $this->facebook->getUser();
 	}
 	
