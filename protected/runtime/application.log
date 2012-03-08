@@ -6727,3 +6727,506 @@ REQUEST_URI=/universe/campus/2/course
 in /Users/alfredtan/Sites/inti.dev/protected/views/universe/xml.php (8)
 in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (411)
 in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 21:05:56 [error] [exception.CException] exception 'CException' with message 'DashboardController cannot find the requested view "tab".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:879
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): CController->renderPartial('tab', NULL, true)
+#1 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(18): CController->render('tab')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): DashboardController->actionIndex()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('')
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard')
+#8 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/dashboard
+---
+2012/03/08 21:07:13 [error] [exception.CException] exception 'CException' with message 'DashboardController cannot find the requested view "tab".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:879
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): CController->renderPartial('tab', NULL, true)
+#1 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(18): CController->render('tab')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): DashboardController->actionIndex()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('')
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard')
+#8 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/dashboard
+---
+2012/03/08 21:21:03 [error] [php] Missing argument 2 for CDbCommand::join(), called in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php on line 26 and defined (/Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:805)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): DashboardController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): DashboardController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): DashboardController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/dashboard/users
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (26)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 21:21:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dateRegistered``, `c`.`name` AS ``campusName``
+FROM `user` `u`
+JOIN `user` `u jo' at line 1. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`mobile`, `u`.`email`, `u`.`dateRegistered` AS `+ interval 8 hour as `dateRegistered``, `c`.`name` AS ``campusName``
+FROM `user` `u`
+JOIN `user` `u join campus c` ON u.campusId=c.id.
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (27)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 21:21:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dateRegistered``, `c`.`name` AS ``campusName``
+FROM `user` `u`
+JOIN `user` `u jo' at line 1. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`mobile`, `u`.`email`, `u`.`dateRegistered` AS `+ interval 8 hour as `dateRegistered``, `c`.`name` AS ``campusName``
+FROM `user` `u`
+JOIN `user` `u join campus c` ON u.campusId=c.id' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(27): CDbCommand->queryAll()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): DashboardController->actionUsers()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('users')
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/users')
+#8 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/dashboard/users
+---
+2012/03/08 21:22:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dateRegistered``, `c`.`name` AS ``campusName``
+FROM `user` `u`
+JOIN `campus` `c`' at line 1. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`mobile`, `u`.`email`, `u`.`dateRegistered` AS `+ interval 8 hour as `dateRegistered``, `c`.`name` AS ``campusName``
+FROM `user` `u`
+JOIN `campus` `c` ON u.campusId=c.id.
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (27)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 21:22:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dateRegistered``, `c`.`name` AS ``campusName``
+FROM `user` `u`
+JOIN `campus` `c`' at line 1. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`mobile`, `u`.`email`, `u`.`dateRegistered` AS `+ interval 8 hour as `dateRegistered``, `c`.`name` AS ``campusName``
+FROM `user` `u`
+JOIN `campus` `c` ON u.campusId=c.id' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(27): CDbCommand->queryAll()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): DashboardController->actionUsers()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('users')
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/users')
+#8 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/dashboard/users
+---
+2012/03/08 21:29:32 [error] [php] Undefined index:  dateRegistered (/Users/alfredtan/Sites/inti.dev/protected/views/dashboard/users.php:17)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): DashboardController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): DashboardController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(30): DashboardController->render()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): DashboardController->actionUsers()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): DashboardController->runAction()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): DashboardController->runActionWithFilters()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): DashboardController->run()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/dashboard/users
+in /Users/alfredtan/Sites/inti.dev/protected/views/dashboard/users.php (17)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (30)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 21:33:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column '6' in 'order clause'. The SQL statement executed was: SELECT u.fbid, u.name, u.nric, u.mobile, u.email, (u.dateRegistered + interval 8 hour) as dateRegistered, c.name as campusName
+FROM `user` `u`
+JOIN `campus` `c` ON u.campusId=c.id
+WHERE u.email not in (select email from excludes)
+ORDER BY `6` ASC.
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (29)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 21:33:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column '6' in 'order clause'. The SQL statement executed was: SELECT u.fbid, u.name, u.nric, u.mobile, u.email, (u.dateRegistered + interval 8 hour) as dateRegistered, c.name as campusName
+FROM `user` `u`
+JOIN `campus` `c` ON u.campusId=c.id
+WHERE u.email not in (select email from excludes)
+ORDER BY `6` ASC' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(29): CDbCommand->queryAll()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): DashboardController->actionUsers()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('users')
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/users')
+#8 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/dashboard/users
+---
+2012/03/08 21:38:17 [error] [php] Invalid argument supplied for foreach() (/Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php:46)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): DashboardController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): DashboardController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): DashboardController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/dashboard/universe/512663243
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (46)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 21:38:25 [error] [php] Invalid argument supplied for foreach() (/Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php:46)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): DashboardController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): DashboardController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): DashboardController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/dashboard/universe/512663243
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (46)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 22:09:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'v'. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`email`, `u`.`mobile`, `v`.`id`, `campus`.`name` AS `campusName`, `course`.`name` AS `courseName`, `interest`.`name` AS `interestName`, `life`.`name` AS `lifeName`, `v`.`courseId`, `v`.`courseId`, `v`.`interestId`, `v`.`lifeId`, `v`.`friend1`, `v`.`friend2`, `v`.`friend3`, `v`.`dateCreate`
+FROM `universe` `v`
+LEFT JOIN `universe` `v` ON u.fbid=v.fbid
+LEFT JOIN `campus` ON v.campusId=campus.id
+LEFT JOIN `course` ON v.courseId=course.id
+LEFT JOIN `interest` ON v.interestId=interest.id
+LEFT JOIN `life` ON v.lifeId=life.id
+GROUP BY `1 order by dateCreate asc`.
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (56)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 22:09:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'v'. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`email`, `u`.`mobile`, `v`.`id`, `campus`.`name` AS `campusName`, `course`.`name` AS `courseName`, `interest`.`name` AS `interestName`, `life`.`name` AS `lifeName`, `v`.`courseId`, `v`.`courseId`, `v`.`interestId`, `v`.`lifeId`, `v`.`friend1`, `v`.`friend2`, `v`.`friend3`, `v`.`dateCreate`
+FROM `universe` `v`
+LEFT JOIN `universe` `v` ON u.fbid=v.fbid
+LEFT JOIN `campus` ON v.campusId=campus.id
+LEFT JOIN `course` ON v.courseId=course.id
+LEFT JOIN `interest` ON v.interestId=interest.id
+LEFT JOIN `life` ON v.lifeId=life.id
+GROUP BY `1 order by dateCreate asc`' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(56): CDbCommand->queryAll()
+#2 [internal function]: DashboardController->actionUniverse('512663243')
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(DashboardController), Object(ReflectionMethod), Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('universe')
+#9 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/unive...')
+#10 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/dashboard/universe/512663243
+HTTP_REFERER=http://inti.dev/dashboard/users
+---
+2012/03/08 22:09:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'v'. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`email`, `u`.`mobile`, `v`.`id`, `campus`.`name` AS `campusName`, `course`.`name` AS `courseName`, `interest`.`name` AS `interestName`, `life`.`name` AS `lifeName`, `v`.`courseId`, `v`.`courseId`, `v`.`interestId`, `v`.`lifeId`, `v`.`friend1`, `v`.`friend2`, `v`.`friend3`, `v`.`dateCreate`
+FROM `universe` `v`
+LEFT JOIN `universe` `v` ON u.fbid=v.fbid
+LEFT JOIN `campus` ON v.campusId=campus.id
+LEFT JOIN `course` ON v.courseId=course.id
+LEFT JOIN `interest` ON v.interestId=interest.id
+LEFT JOIN `life` ON v.lifeId=life.id
+GROUP BY `u`.`fbid order by dateCreate asc`.
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (56)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 22:09:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'v'. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`email`, `u`.`mobile`, `v`.`id`, `campus`.`name` AS `campusName`, `course`.`name` AS `courseName`, `interest`.`name` AS `interestName`, `life`.`name` AS `lifeName`, `v`.`courseId`, `v`.`courseId`, `v`.`interestId`, `v`.`lifeId`, `v`.`friend1`, `v`.`friend2`, `v`.`friend3`, `v`.`dateCreate`
+FROM `universe` `v`
+LEFT JOIN `universe` `v` ON u.fbid=v.fbid
+LEFT JOIN `campus` ON v.campusId=campus.id
+LEFT JOIN `course` ON v.courseId=course.id
+LEFT JOIN `interest` ON v.interestId=interest.id
+LEFT JOIN `life` ON v.lifeId=life.id
+GROUP BY `u`.`fbid order by dateCreate asc`' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(56): CDbCommand->queryAll()
+#2 [internal function]: DashboardController->actionUniverse('512663243')
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(DashboardController), Object(ReflectionMethod), Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('universe')
+#9 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/unive...')
+#10 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/dashboard/universe/512663243
+HTTP_REFERER=http://inti.dev/dashboard/users
+---
+2012/03/08 22:09:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'v'. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`email`, `u`.`mobile`, `v`.`id`, `campus`.`name` AS `campusName`, `course`.`name` AS `courseName`, `interest`.`name` AS `interestName`, `life`.`name` AS `lifeName`, `v`.`courseId`, `v`.`courseId`, `v`.`interestId`, `v`.`lifeId`, `v`.`friend1`, `v`.`friend2`, `v`.`friend3`, `v`.`dateCreate`
+FROM `universe` `v`
+LEFT JOIN `universe` `v` ON u.fbid=v.fbid
+LEFT JOIN `campus` ON v.campusId=campus.id
+LEFT JOIN `course` ON v.courseId=course.id
+LEFT JOIN `interest` ON v.interestId=interest.id
+LEFT JOIN `life` ON v.lifeId=life.id
+GROUP BY `1`.
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (56)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 22:09:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'v'. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`email`, `u`.`mobile`, `v`.`id`, `campus`.`name` AS `campusName`, `course`.`name` AS `courseName`, `interest`.`name` AS `interestName`, `life`.`name` AS `lifeName`, `v`.`courseId`, `v`.`courseId`, `v`.`interestId`, `v`.`lifeId`, `v`.`friend1`, `v`.`friend2`, `v`.`friend3`, `v`.`dateCreate`
+FROM `universe` `v`
+LEFT JOIN `universe` `v` ON u.fbid=v.fbid
+LEFT JOIN `campus` ON v.campusId=campus.id
+LEFT JOIN `course` ON v.courseId=course.id
+LEFT JOIN `interest` ON v.interestId=interest.id
+LEFT JOIN `life` ON v.lifeId=life.id
+GROUP BY `1`' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(56): CDbCommand->queryAll()
+#2 [internal function]: DashboardController->actionUniverse('512663243')
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(DashboardController), Object(ReflectionMethod), Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('universe')
+#9 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/unive...')
+#10 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/dashboard/universe/512663243
+HTTP_REFERER=http://inti.dev/dashboard/users
+---
+2012/03/08 22:10:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'v'. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`email`, `u`.`mobile`, `v`.`id`, `campus`.`name` AS `campusName`, `course`.`name` AS `courseName`, `interest`.`name` AS `interestName`, `life`.`name` AS `lifeName`, `v`.`courseId`, `v`.`courseId`, `v`.`interestId`, `v`.`lifeId`, `v`.`friend1`, `v`.`friend2`, `v`.`friend3`, `v`.`dateCreate`
+FROM `universe` `v`
+LEFT JOIN `universe` `v` ON u.fbid=v.fbid
+LEFT JOIN `campus` ON v.campusId=campus.id
+LEFT JOIN `course` ON v.courseId=course.id
+LEFT JOIN `interest` ON v.interestId=interest.id
+LEFT JOIN `life` ON v.lifeId=life.id
+GROUP BY `u`.`fbid`.
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (56)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 22:10:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'v'. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`email`, `u`.`mobile`, `v`.`id`, `campus`.`name` AS `campusName`, `course`.`name` AS `courseName`, `interest`.`name` AS `interestName`, `life`.`name` AS `lifeName`, `v`.`courseId`, `v`.`courseId`, `v`.`interestId`, `v`.`lifeId`, `v`.`friend1`, `v`.`friend2`, `v`.`friend3`, `v`.`dateCreate`
+FROM `universe` `v`
+LEFT JOIN `universe` `v` ON u.fbid=v.fbid
+LEFT JOIN `campus` ON v.campusId=campus.id
+LEFT JOIN `course` ON v.courseId=course.id
+LEFT JOIN `interest` ON v.interestId=interest.id
+LEFT JOIN `life` ON v.lifeId=life.id
+GROUP BY `u`.`fbid`' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(56): CDbCommand->queryAll()
+#2 [internal function]: DashboardController->actionUniverse('512663243')
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(DashboardController), Object(ReflectionMethod), Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('universe')
+#9 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/unive...')
+#10 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/dashboard/universe/512663243
+HTTP_REFERER=http://inti.dev/dashboard/users
+---
+2012/03/08 22:10:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'v'. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`email`, `u`.`mobile`, `v`.`id`, `campus`.`name` AS `campusName`, `course`.`name` AS `courseName`, `interest`.`name` AS `interestName`, `life`.`name` AS `lifeName`, `v`.`courseId`, `v`.`courseId`, `v`.`interestId`, `v`.`lifeId`, `v`.`friend1`, `v`.`friend2`, `v`.`friend3`, `v`.`dateCreate`
+FROM `universe` `v`
+LEFT JOIN `universe` `v` ON u.fbid=v.fbid
+LEFT JOIN `campus` ON v.campusId=campus.id
+LEFT JOIN `course` ON v.courseId=course.id
+LEFT JOIN `interest` ON v.interestId=interest.id
+LEFT JOIN `life` ON v.lifeId=life.id
+GROUP BY `u`.`fbid`
+ORDER BY `dateCreate` ASC.
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (57)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 22:10:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'v'. The SQL statement executed was: SELECT `u`.`fbid`, `u`.`name`, `u`.`nric`, `u`.`email`, `u`.`mobile`, `v`.`id`, `campus`.`name` AS `campusName`, `course`.`name` AS `courseName`, `interest`.`name` AS `interestName`, `life`.`name` AS `lifeName`, `v`.`courseId`, `v`.`courseId`, `v`.`interestId`, `v`.`lifeId`, `v`.`friend1`, `v`.`friend2`, `v`.`friend3`, `v`.`dateCreate`
+FROM `universe` `v`
+LEFT JOIN `universe` `v` ON u.fbid=v.fbid
+LEFT JOIN `campus` ON v.campusId=campus.id
+LEFT JOIN `course` ON v.courseId=course.id
+LEFT JOIN `interest` ON v.interestId=interest.id
+LEFT JOIN `life` ON v.lifeId=life.id
+GROUP BY `u`.`fbid`
+ORDER BY `dateCreate` ASC' in /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(57): CDbCommand->queryAll()
+#2 [internal function]: DashboardController->actionUniverse('512663243')
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(DashboardController), Array)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(DashboardController), Object(ReflectionMethod), Array)
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('universe')
+#9 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/unive...')
+#10 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/dashboard/universe/512663243
+HTTP_REFERER=http://inti.dev/dashboard/users
+---
+2012/03/08 22:10:55 [error] [php] Undefined index:  id (/Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php:61)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): DashboardController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): DashboardController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): DashboardController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/dashboard/universe/512663243
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (61)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 22:11:13 [error] [php] Undefined index:  universeId (/Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php:61)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): DashboardController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): DashboardController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): DashboardController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/dashboard/universe/512663243
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (61)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 22:11:45 [error] [php] Undefined index:  universeId (/Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php:61)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): DashboardController->runAction()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): DashboardController->runActionWithFilters()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): DashboardController->run()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/dashboard/universe/512663243
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (61)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 22:15:16 [error] [php] Undefined variable: users (/Users/alfredtan/Sites/inti.dev/protected/views/dashboard/universe.php:1)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(870): DashboardController->renderFile()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(783): DashboardController->renderPartial()
+#2 /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php(59): DashboardController->render()
+#3 unknown(0): DashboardController->actionUniverse()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): DashboardController->runAction()
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): DashboardController->runActionWithFilters()
+#9 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): DashboardController->run()
+#10 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#11 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/dashboard/universe/512663243
+in /Users/alfredtan/Sites/inti.dev/protected/views/dashboard/universe.php (1)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (59)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/08 22:33:10 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:337
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('universe')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/unive...')
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/dashboard/universe
+HTTP_REFERER=http://inti.dev/dashboard/users
+---
+2012/03/08 22:44:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('dashboard')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('dashboard')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/dashb...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/dashboard/dashboard
+---
+2012/03/08 22:44:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('dashboard')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('dashboard')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/dashb...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/dashboard/dashboard
+---
+2012/03/08 22:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('dashboard')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('dashboard')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/dashb...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/dashboard/dashboard
+---
+2012/03/08 22:44:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('dashboard')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('dashboard')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/dashb...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/dashboard/dashboard
+---
+2012/03/08 22:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('dashboard')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('dashboard')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/dashb...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/dashboard/dashboard
+---
+2012/03/08 22:45:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('dashboard')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('dashboard')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/dashb...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/dashboard/dashboard/index
+HTTP_REFERER=http://inti.dev/dashboard
+---
+2012/03/08 22:45:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('dashboard')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('dashboard')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/dashb...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/dashboard/dashboard/index
+HTTP_REFERER=http://inti.dev/dashboard/
+---
+2012/03/08 22:47:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('dashboard')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('dashboard')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/dashb...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/dashboard/dashboard/index
+---
+2012/03/08 22:47:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:484
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(271): CController->missingAction('dashboard')
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('dashboard')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('dashboard/dashb...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/dashboard/dashboard/index
+---
