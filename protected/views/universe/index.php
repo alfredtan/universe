@@ -67,7 +67,7 @@
                     <td><?php echo $form->textField($model,'email', array('class'=>'', 'value'=>'')); ?></td>
                   </tr>
                   <tr>
-                    <td><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-field-location.jpg" width="133" height="32" alt="Email" /></td>
+                    <td><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/canvas/reg-field-location.jpg" width="133" height="32" alt="Location" /></td>
                     <td><?php
                 echo CHtml::activeDropDownList( 
                     Campus::model(),
@@ -81,6 +81,9 @@
                   	<td>&nbsp;</td>
                   	<td  style="font-family: arial; font-size:11px; color: #666666; font-style: italic"><input type="checkbox" id="tnc" value="true" name="tnc"><label for="tnc">I have read and agreed to the <a href="javascript:;" onClick="showtnc('register')" style="color:#999999;">Terms &amp; Conditions</a></label></td>
                   </tr>
+                   <tr><td colspan="2">&nbsp;</td></tr>
+                 <tr><td>&nbsp;</td>
+                 <td style="font-size:10px; font-style:italic; font-family:arial">* This app is especially for SPM & STPM school leavers <br>who are 18-19 years old as of 1 January, 2012.</td></tr>
                  <tr><td colspan="2">&nbsp;</td></tr>
                  <tr>
                  	<td>&nbsp;</td>
