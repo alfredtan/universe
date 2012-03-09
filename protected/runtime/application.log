@@ -6594,3 +6594,27 @@ Stack trace:
 REQUEST_URI=/_pma_/sql.php?db=test&token=da53cabe0ca71c7ebaf197758134c06e&table=course&pos=0
 HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/_pma_/navigation.php?token=da53cabe0ca71c7ebaf197758134c06e&db=test
 ---
+2012/03/09 11:04:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\htdocs\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\htdocs\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\htdocs\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\htdocs\universe\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/03/09 11:04:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\htdocs\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\htdocs\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\htdocs\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\htdocs\universe\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/03/09 11:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\htdocs\yii_framework\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\htdocs\yii_framework\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\htdocs\yii_framework\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\htdocs\universe\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
