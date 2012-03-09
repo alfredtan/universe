@@ -31,11 +31,11 @@ class UniverseController extends Controller
 		{
 			if( count($universe) == 0 )
 			{
-			$this->redirect(Yii::app()->createUrl('universe/create'));				
+			header('location: /universe/create');				
 			}
 			else
 			{
-			$this->redirect(Yii::app()->createUrl('universe/view'));
+			header('location: /universe/view');
 				
 			}
 		}
@@ -210,7 +210,9 @@ class UniverseController extends Controller
 			if( $universe['friend3']>0 ) $tags[]['tag_uid'] = $universe['friend3'];
 			
 			$args = array(
-			        'message' => $this->getMessage(),
+			        'message' => $this->getMessage() . '
+			        
+					Stand a chance to win an iPad 2, a Fujifilm Instax Mini 7s Polaroid Camera or tickets to your favourite movies while creating your dream campus here: http://apps.facebook.com/intiuniverse',
 			        'source' => '@' . realpath($file)
 			        );
 	
@@ -379,37 +381,38 @@ class UniverseController extends Controller
 		$courseAll = Course::model()->findAll();
 		$course = ViewCampusCourse::model()->findAll('campusId=:campusId', array(':campusId'=>$id));
 		$data=array();
-		
+		$found = array();
+		$i=0;
+		foreach($course as $id=>$arr)
+		{
+			$data[$i]['id']=$arr['courseId'];
+			$data[$i]['name']=$arr['courseName'];
+			$data[$i]['headline']=$arr['courseHeadline'];
+			$data[$i]['tooltip']=$arr['courseTooltip'];
+			$data[$i]['enabled']='true';
+			
+			$found[] = $arr['courseId'];
+			//echo $arr['courseId'] . '<BR>';
+			$i++;
+		}
+
 		foreach ($courseAll as $id=>$arr)
 		{
-			$found=false;
-			
-			// temp solution
-			// found if this id is 
-			foreach($course as $id2=>$arr2)
+				// echo $arr['id'] . '<BR>';
+			if( ! in_array($arr['id'], $found))
 			{
-				if($arr2['courseId']==$arr['id'])
-				{
-					$found = true;
-				}
+				$data[$i]['id']=$arr['id'];
+				$data[$i]['name']=$arr['name'];
+				$data[$i]['headline']=$arr['headline'];
+				$data[$i]['tooltip']=$arr['tooltip'];
+				$data[$i]['enabled']='false';
+				$found[] = $arr['id'];
+				
+				$i++;
 			}
-			
-			$data[$id]['id']=$arr['id'];
-			$data[$id]['name']=$arr['name'];
-			$data[$id]['headline']=$arr['headline'];
-			$data[$id]['tooltip']=$arr['tooltip'];
-
-			if($found)
-			{
-				$data[$id]['enabled']='true';
-			}
-			else
-			{
-				$data[$id]['enabled']='false';
-			}
-			
-			
+			//print_r($found);
 		}
+		//print_r($found);
 		$this->layout='//layouts/xml_layout';
 		$this->render('xml', array('data'=>$data, 'type'=>'course'));
 	}
@@ -420,32 +423,31 @@ class UniverseController extends Controller
 		$campus = ViewCampusCourse::model()->findAll('courseId=:courseId', array(':courseId'=>$id));
 		
 		$data=array();
+		$found = array();
+		$i=0;
+		foreach($campus as $id=>$arr)
+		{
+			$data[$i]['id']=$arr['campusId'];
+			$data[$i]['name']=$arr['campusName'];
+			$data[$i]['headline']=$arr['campusHeadline'];
+			$data[$i]['tooltip']=$arr['campusTooltip'];
+			$data[$i]['enabled']='true';
+			
+			$found[] = $arr['campusId'];
+			$i++;
+		}
+
 		foreach ($campusAll as $id=>$arr)
 		{
-			$found=false;
-			
-			// temp solution
-			// found if this id is 
-			foreach($campus as $id2=>$arr2)
+			if( ! in_array($id, $found))
 			{
-				if($arr2['campusId']==$arr['id'])
-				{
-					$found = true;
-				}
-			}
-			
-			$data[$id]['id']=$arr['id'];
-			$data[$id]['name']=$arr['name'];
-			$data[$id]['headline']=$arr['headline'];
-			$data[$id]['tooltip']=$arr['tooltip'];
-
-			if($found)
-			{
-				$data[$id]['enabled']='true';
-			}
-			else
-			{
-				$data[$id]['enabled']='false';
+				$data[$i]['id']=$arr['id'];
+				$data[$i]['name']=$arr['name'];
+				$data[$i]['headline']=$arr['headline'];
+				$data[$i]['tooltip']=$arr['tooltip'];
+				$data[$i]['enabled']='false';
+				$found[] = $arr['id'];
+				$i++;
 			}
 		}
 		$this->layout='//layouts/xml_layout';

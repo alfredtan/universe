@@ -53,6 +53,23 @@
 				color:#545454
 			}
 		</style>
+			<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29749665-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+	function _trackga(pagename)
+	{
+		_gaq.push(['_trackPageview', pagename]);	
+	}
+</script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -64,7 +81,7 @@
 			    <td align="left" valign="top"><table width="494" border="0" cellspacing="0" cellpadding="0">
 			      <tr>
 			        <td width="62" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_02.png" width="62" height="55" /></td>
-			        <td width="152" align="left" valign="top"><a target="_top" href="<?php echo Yii::app()->params['appUrl']; ?>"><img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_03.png" width="152" height="55" /></a></td>
+			        <td width="152" align="left" valign="top"><a target="_top" onclick="_trackga('/tab/buildmyuniverse')" href="<?php echo Yii::app()->params['appUrl']; ?>"><img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_03.png" width="152" height="55" /></a></td>
 			        <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_04.png" width="280" height="55" /></td>
 			      </tr>
 			    </table></td>
