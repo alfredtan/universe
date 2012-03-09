@@ -16,7 +16,7 @@ Users | <a href="<?php echo Yii::app()->createUrl('dashboard/universe'); ?>">Uni
   </tr>
   <?php foreach ($users as $user) { ?>
   <tr>
-    <td><a href="<?php echo Yii::app()->createUrl('dashboard/universe', array('id'=>$user['fbid']));  ?>" target="_blank"><?php echo $user['name']; ?></a></td>
+    <td><?php echo $user['name']; ?></td>
     <td><?php echo $user['email']; ?></td>
     <td><?php echo $user['nric']; ?></td>
     <td><?php echo $user['mobile']; ?></td>
