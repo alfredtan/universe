@@ -324,11 +324,11 @@ class UniverseController extends Controller
 		
 	}
 	
-	public function actionTest()
-	{
-		print_r($_SESSION);
-		echo $this->facebook->getFbid();
-	}
+	// public function actionTest()
+	// {
+		// print_r($_SESSION);
+		// echo $this->facebook->getFbid();
+	// }
 	
 	public function actionCreate()
 	{
