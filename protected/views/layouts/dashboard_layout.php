@@ -15,9 +15,12 @@
 				font-size:12px;
 				color:#333333;
 			}
-			
+	
+			td{ padding:5px 2px }		
+	
 			th.left
 			{
+				padding: 5px;
 				text-align:left;
 			}
 			
@@ -30,6 +33,8 @@
 			
 	</head>
 	<body>
-		<?php echo $content; ?>
+		<div >
+			<?php echo $content; ?>
+		</div>
 	</body>
 </html>
