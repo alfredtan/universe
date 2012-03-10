@@ -7362,4 +7362,154 @@ REQUEST_URI=/dashboard/universe
 in /Users/alfredtan/Sites/inti.dev/protected/views/dashboard/universe.php (42)
 in /Users/alfredtan/Sites/inti.dev/protected/controllers/DashboardController.php (106)
 in /Users/alfredtan/Sites/inti.dev/index.php (12)
+<<<<<<< HEAD
 >>>>>>> dashboard update
+=======
+2012/03/10 08:58:21 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.reqyest" is not defined.' in /Users/alfredtan/Sites/yii_framework/framework/base/CComponent.php:131
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/base/CModule.php(106): CComponent->__get('reqyest')
+#1 /Users/alfredtan/Sites/inti.dev/protected/views/layouts/tab_layout.php(71): CModule->__get('reqyest')
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CBaseController.php(127): require('/Users/alfredta...')
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alfredta...', Array, true)
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(785): CBaseController->renderFile('/Users/alfredta...', Array, true)
+#5 /Users/alfredtan/Sites/inti.dev/protected/controllers/TabController.php(18): CController->render('tab')
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): TabController->actionIndex()
+#7 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#12 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#14 {main}
+REQUEST_URI=/
+---
+2012/03/10 12:53:36 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:28) (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:36)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (36)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/10 13:00:23 [error] [php] Undefined property: FacebookWrapper::$fbuser (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:324)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/create
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (324)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/10 13:00:59 [error] [exception.FacebookApiException] OAuthException: An active access token must be used to query information about the current user.
+REQUEST_URI=/universe/create
+---
+2012/03/10 13:01:53 [error] [exception.FacebookApiException] OAuthException: An active access token must be used to query information about the current user.
+REQUEST_URI=/universe/create
+---
+2012/03/10 13:08:47 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/alfredtan/Sites/inti.dev/protected/controllers/FacebookController.php:47) (/Users/alfredtan/Sites/yii_framework/framework/web/CHttpRequest.php:715)
+Stack trace:
+#0 /Users/alfredtan/Sites/inti.dev/protected/controllers/FacebookController.php(53): FacebookController->redirect()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): FacebookController->actionAuthorize()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): FacebookController->runAction()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): FacebookController->runActionWithFilters()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): FacebookController->run()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/facebook/authorize?state=1e71011c10654877192ced5a9e402a21&code=AQCFm0CdgijX_YOiagRkU6kI1bw_v94HUYC5bdYuF0HLqAlTFsW3B37MhZ6UjgORi27n8GuhJuvHjG4lfHcpENcSmRxmgTZIJvjdCnvYLgNVSNG9cnPv3xdDjr7nKRNkQmhwuzFjTjb3iKN-vX2BXJspjtPHb1zEGVKCMzUKZpRJT80SC3HSlv-l5Eut01C0kWg
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/FacebookController.php (53)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/10 13:09:56 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/alfredtan/Sites/inti.dev/protected/controllers/FacebookController.php:47) (/Users/alfredtan/Sites/yii_framework/framework/web/CHttpRequest.php:715)
+Stack trace:
+#0 /Users/alfredtan/Sites/inti.dev/protected/controllers/FacebookController.php(53): FacebookController->redirect()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/actions/CInlineAction.php(50): FacebookController->actionAuthorize()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): FacebookController->runAction()
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): FacebookController->runActionWithFilters()
+#5 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): FacebookController->run()
+#6 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/facebook/authorize?state=1e71011c10654877192ced5a9e402a21&code=AQCFm0CdgijX_YOiagRkU6kI1bw_v94HUYC5bdYuF0HLqAlTFsW3B37MhZ6UjgORi27n8GuhJuvHjG4lfHcpENcSmRxmgTZIJvjdCnvYLgNVSNG9cnPv3xdDjr7nKRNkQmhwuzFjTjb3iKN-vX2BXJspjtPHb1zEGVKCMzUKZpRJT80SC3HSlv-l5Eut01C0kWg
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/FacebookController.php (53)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/10 13:45:23 [error] [php] Undefined variable: register (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:52)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (52)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/10 13:45:43 [error] [php] Undefined variable: register (/Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php:52)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (52)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/10 13:46:58 [error] [php] Undefined index:  oauth_token (/Users/alfredtan/Sites/inti.dev/protected/models/FacebookWrapper.php:29)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/
+in /Users/alfredtan/Sites/inti.dev/protected/models/FacebookWrapper.php (29)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (18)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/10 13:47:47 [error] [php] Undefined index:  oauth_token (/Users/alfredtan/Sites/inti.dev/protected/models/FacebookWrapper.php:29)
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): UniverseController->runAction()
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): UniverseController->runActionWithFilters()
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): UniverseController->run()
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Users/alfredtan/Sites/inti.dev/index.php(12): CWebApplication->run()
+REQUEST_URI=/universe/
+in /Users/alfredtan/Sites/inti.dev/protected/models/FacebookWrapper.php (29)
+in /Users/alfredtan/Sites/inti.dev/protected/controllers/UniverseController.php (18)
+in /Users/alfredtan/Sites/inti.dev/index.php (12)
+2012/03/10 14:05:43 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:337
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('accesstoken')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('facebook/access...')
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/facebook/accesstoken?accesstoken=AAADAAZAl4mC8BAFt2EhkpYgfZAFfZCMPX1K33AiSvRKJ8NJVpWaWwKVCQ7PoedQveyv0cZBQSntRliNVZB3jRhK78wpKPMhcZBbqxZBDx2hyAZDZD
+HTTP_REFERER=http://ec2-46-137-233-116.ap-southeast-1.compute.amazonaws.com/universe/
+---
+2012/03/10 14:05:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredtan/Sites/yii_framework/framework/web/CController.php:337
+Stack trace:
+#0 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredtan/Sites/yii_framework/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(276): CController->run('accesstoken')
+#4 /Users/alfredtan/Sites/yii_framework/framework/web/CWebApplication.php(135): CWebApplication->runController('facebook/access...')
+#5 /Users/alfredtan/Sites/yii_framework/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Users/alfredtan/Sites/inti.dev/index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/facebook/accesstoken?accesstoken=AAADAAZAl4mC8BAFt2EhkpYgfZAFfZCMPX1K33AiSvRKJ8NJVpWaWwKVCQ7PoedQveyv0cZBQSntRliNVZB3jRhK78wpKPMhcZBbqxZBDx2hyAZDZD
+---
+>>>>>>> updated tab and permission dialogs

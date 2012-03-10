@@ -173,10 +173,11 @@ The Contest will commence on 7  March 2012 and end on 15  April 2012 at 11.59 pm
 		);
 		if(document.location.protocol == 'https:' && !!FB && !!FB._domain && !!FB._domain.staticfb)
 		{
-		FB._domain.staticfb = FB._domain.staticfb.replace('http://static.ak.facebook.com/', 'https://s-static.ak.fbcdn.net/');
+		//FB._domain.staticfb = FB._domain.staticfb.replace('http://static.ak.facebook.com/', 'https://s-static.ak.fbcdn.net/');
 		}
 		//FB.Canvas.setSize({height: 1500});
 		//FB.Canvas.setAutoResize(7);
+		getLoginStatus()
 		FB.Canvas.setAutoGrow();
 		
 		// add function here to trigger after FB.init completes

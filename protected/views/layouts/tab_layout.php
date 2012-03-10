@@ -7,13 +7,8 @@
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.reveal.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/facebook.wrapper.js"></script>
 		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/reveal.css" type="text/css" rel="stylesheet">
+        <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/default.css" type="text/css" rel="stylesheet">
 		<style>
-			body
-			{
-				margin:0px;
-				padding:0px;
-				width:497px;
-			}
 			
 			#tncModal
 			{
@@ -72,38 +67,12 @@
 </script>
 	</head>
 	<body>
-		<div id="wrapper">
-				<table width="494" border="0" cellspacing="0" cellpadding="0">
-			  <tr>
-			    <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_01.png" width="494" height="281" /></td>
-			  </tr>
-			  <tr>
-			    <td align="left" valign="top"><table width="494" border="0" cellspacing="0" cellpadding="0">
-			      <tr>
-			        <td width="62" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_02.png" width="62" height="55" /></td>
-			        <td width="152" align="left" valign="top"><a target="_top" onclick="_trackga('/tab/buildmyuniverse')" href="<?php echo Yii::app()->params['appUrl']; ?>"><img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_03.png" width="152" height="55" /></a></td>
-			        <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_04.png" width="280" height="55" /></td>
-			      </tr>
-			    </table></td>
-			  </tr>
-			  <tr>
-			    <td align="left" valign="top"><table width="494" border="0" cellspacing="0" cellpadding="0">
-			      <tr>
-			        <td width="62" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_05.png" width="62" height="21" /></td>
-			        <td width="152" align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_06.png" width="152" height="21" /></td>
-			        <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_07.png" width="280" height="21" /></td>
-			      </tr>
-			    </table></td>
-			  </tr>
-			  <tr>
-			    <td align="left" valign="top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab/tab-page_08.jpg" width="494" height="402" /></td>
-			  </tr>
-			  <tr>
-			    <td height="20" align="center" valign="middle" bgcolor="#000000"><span style="font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#999999;">&copy; Copyright 2012 INTI International University & Colleges. All Rights Reserved.  <a href="javascript:;" onClick="showtnc()" style="color:#999999;">Terms & Conditions</a></span></td>
-			  </tr>
-			</table>
-		</div>
-		<div id="tncModal" class="reveal-modal small">
+		<div class="main">
+	<div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab_wide/copy.png" width="492" height="307" /></div>
+    <div class="cta"><a href="<?php echo Yii::app()->params['appUrl']; ?>" target="_top"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab_wide/cta.png" alt="Build My Uni-Verse Now!" width="250" height="110" border="0" /></a></div>
+</div>
+<div><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/tab_wide/tnc.jpg" width="810" height="33" border="0" usemap="#Map" /></div>
+		<div id="tncModal" class="reveal-modal large">
           	<div id="container">
             	<p>This "Uni-Verse" ("Contest") is organized by INTI International University & Colleges (""INTI"). INTI is also the administrator for the Contest. By registering to take part in this Contest, the person doing so shall be taken to have fully and unconditionally agreed to be bound by the terms and conditions stated hereinafter:</p>
             <h3>Eligibility</h3>
@@ -171,4 +140,7 @@
 	}
 	</script>
 	</body>
+      <map name="Map" id="Map">
+    <area shape="rect" coords="702,6,803,28" href="javascript:;" onClick="showtnc()" alt="Terms &amp; Conditions" />
+  </map>
 </html>

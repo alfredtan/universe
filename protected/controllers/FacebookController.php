@@ -18,6 +18,22 @@ class FacebookController extends Controller
 		$this->facebook->connect();
 	}
 	
+	public function actionDisconnect()
+	{
+		if(isset($_SESSION['access_token']))
+		{
+			unset($_SESSION['access_token']);
+		}
+	}
+	
+	public function actionAccessToken()
+	{
+		if(isset($_POST['access_token']))
+		{
+			$_SESSION['access_token'] = $_POST['access_token'];
+		}
+	}
+	
 	public function actionAuthorize()
 	{
 		$code = $_GET["code"];
@@ -44,6 +60,7 @@ class FacebookController extends Controller
 			$params = null;
 			parse_str($response, $params);
 			
+			print_r($params);
 			$this->facebook->setAccessToken($params['access_token']) ;
 			
 			if($this->facebook->isConnected())

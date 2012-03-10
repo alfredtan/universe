@@ -14,6 +14,20 @@ class FacebookWrapper
 		  'appId'  => Yii::app()->params['facebookAppId'],
 		  'secret' => Yii::app()->params['facebookAppSecret']
 		));
+		
+		$signed_request = $this->facebook->getSignedRequest();
+
+		// use signed_request access token if available
+		if(isset($signed_request['oauth_token']))
+		{
+			$_SESSION['access_token'] = $signed_request['oauth_token'];
+			$this->setAccessToken($signed_request['oauth_token']);
+		}		
+		// if not, check for session access_token
+		else if( isset($_SESSION['access_token']))
+		{
+			$this->setAccessToken($_SESSION['access_token']);
+		}
   }
 	
 	public function getSignedRequest()
@@ -26,18 +40,20 @@ class FacebookWrapper
 		if (!$this->getFbid()) 
 		{
 			//die('die ' . $this->getLoginURL());
+			die('1');
 		    echo "<script type='text/javascript'>top.location.href = '" . $this->getLoginURL() . "';</script>";
 		    exit;
 		}
 		else {
 		    try 
 		    {
-	        $this->fbuser				=   $this->getMe();
+	        		$this->fbuser				=   $this->getMe();
 					return true;
 		
 		    } 
 		    catch (FacebookApiException $e) 
 		    {
+		    	die($this->getLoginURL());
 		        echo "<script type='text/javascript'>top.location.href = '" . $this->getLoginURL() . "';</script>";
 		        exit;
 		    }
@@ -55,9 +71,9 @@ class FacebookWrapper
 		);
 	}
 	
-	public function setAccessToken($s)
+	public function setAccessToken($access_token)
 	{
-		$this->facebook->setAccessToken($s);
+		$this->facebook->setAccessToken($access_token);
 	}
 	
 	public function getAccessToken()
@@ -74,7 +90,7 @@ class FacebookWrapper
 	    }
 		catch (FacebookApiException $e) 
 	    {
-	    	die($e->getMessage());
+	    	//die($e->getMessage());
 	        return false;
 	    }
 	}

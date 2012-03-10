@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ margin: 0;
+	  padding: 0;
+	  border: 0;
+	  background:url(../images/tab_wide/bg.jpg) no-repeat; }
+	  
+.main{ border: none;
+	   width: 810px; 
+	   height:757px; }
+	   
+.cta{ margin: 0px 0px 0px 70px; 
+			 float: left; }

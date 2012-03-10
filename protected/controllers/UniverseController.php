@@ -22,9 +22,12 @@ class UniverseController extends Controller
 	
 	public function actionIndex()
 	{
-		$this->facebook->connect();
+		
+		// $this->facebook->connect();
 		// die($this->facebook->getAccessToken());
 		
+		// echo $this->facebook->getFbid();
+// die();		
 		$user = User::model()->findByPk($this->facebook->getFbid());
 		$universe = $this->getLatestUniverse();
 		if( count($user)==1 )
@@ -42,7 +45,38 @@ class UniverseController extends Controller
 		
 		//echo $this->facebook->getFbid();
 		$model = new User;
-		$this->render('index', array('model'=>$model));
+		$register=false;
+		if( isset($_GET['register']) )
+		{
+			$register=true;
+		}
+		$this->render('index', array('model'=>$model, 'register'=>$register));
+	}
+	
+	public function actionRegistered()
+	{
+		$user = User::model()->findByPk($this->facebook->getFbid());
+		if( count($user)==1 )
+		{
+			echo 'true';
+		}
+		else
+		{
+			echo 'false';
+		}
+	}
+	
+	
+	public function actionMe()
+	{
+		try
+		{
+			$this->facebook->getMe();
+		}
+		catch (Exception $e)
+		{
+			
+		}
 	}
 	
 	public function actionRegister()
@@ -52,6 +86,16 @@ class UniverseController extends Controller
 		{
 			$user = User::model()->findbyPk($this->facebook->getFbid());
 			if(count($user)){ return; }
+			
+			if($this->facebook->getFbid()==0)
+			{
+				$response = array(
+					'status'=>'fail',
+					'data'=>array("error"=>array("An error has occured"))
+				);
+				echo CJSON::encode( $response );
+				die();
+			}
 			
 			
 			$model = new User;
@@ -170,7 +214,7 @@ class UniverseController extends Controller
 	public function actionUp()
 	{
 		try{
-			$this->facebook->connect();
+			// $this->facebook->connect();
 			$universe = $this->getLatestUniverse();
 			if( count($universe)==0 ) return;
 			
@@ -280,8 +324,18 @@ class UniverseController extends Controller
 		
 	}
 	
+	public function actionTest()
+	{
+		print_r($_SESSION);
+		echo $this->facebook->getFbid();
+	}
+	
 	public function actionCreate()
 	{
+		// if(! $this->facebook->isConnected())
+		// {
+			// $this->facebook->connect();
+		// }
 		$this->facebook->connect();
 		$data['fbid']=$this->facebook->getFbid();
 		$user = User::model()->findByPk($data['fbid']);
