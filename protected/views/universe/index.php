@@ -83,7 +83,7 @@
                   </tr>
                    <tr><td colspan="2">&nbsp;</td></tr>
                  <tr><td>&nbsp;</td>
-                 <td style="font-size:10px; font-style:italic; font-family:arial">* This app is especially for SPM & STPM school leavers <br>who are 18-19 years old as of 1 January, 2012.</td></tr>
+                 <td style="font-size:10px; font-style:italic; font-family:arial">* This app is especially for SPM &amp; STPM school leavers <br>who are 18-20 years old as of 1 January, 2012.</td></tr>
                  <tr><td colspan="2">&nbsp;</td></tr>
                  <tr>
                  	<td>&nbsp;</td>
@@ -96,9 +96,9 @@
 								if($("#tnc:checked").val()=="true")
 								{
 									var yy = $("#User_nric").val().substr(0,2);
-									if( ! (yy==94 || yy==93) )
+									if( ! (yy==94 || yy==93 || yy==92) )
 									{
-										$("#form-msg").html("Oops, this is for SPM 2011 leavers only. <br>If you like to know more about INTI and our courses, please visit <a href=\"http://www.newinti.edu.my/main/request-information\" target=\"_blank\">here</a>.");
+										$("#form-msg").html("Oops, this contest is for 18 to 20 year-old participants. <br>If you\'d like to know more about INTI and our courses, please visit <a href=\"http://www.newinti.edu.my/main/request-information\" target=\"_blank\">here</a>.");
 										return false;
 										
 									}
