@@ -84,14 +84,37 @@ class UniverseController extends Controller
 		
 		if( Yii::app()->request->isAjaxRequest )
 		{
-			$user = User::model()->findbyPk($this->facebook->getFbid());
-			if(count($user)){ return; }
 			
 			if($this->facebook->getFbid()==0)
 			{
 				$response = array(
 					'status'=>'fail',
 					'data'=>array("error"=>array("An error has occured"))
+				);
+				echo CJSON::encode( $response );
+				die();
+			}
+			
+			// check if this user has registered via fbid
+			$user = User::model()->findbyPk($this->facebook->getFbid());
+			if(count($user)==1)
+			{
+				$response = array(
+					'status'=>'fail',
+					'data'=>array("error"=>array("An error has occured"))
+				);
+				echo CJSON::encode( $response );
+				die();
+			}
+			
+			
+			// check if user's nric is registered via nric
+			$user = User::model()->find('nric=:nric', array(':nric'=>$_POST['User']['nric']));
+			if(count($user)==1)
+			{
+				$response = array(
+					'status'=>'fail',
+					'data'=>array("error"=>array("Oops. Your NRIC has been registered."))
 				);
 				echo CJSON::encode( $response );
 				die();
