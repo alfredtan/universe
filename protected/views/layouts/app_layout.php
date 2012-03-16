@@ -4,6 +4,10 @@
 <html>
 	<head>
 		<title><?php echo CHtml::encode(Yii::app()->name); ?></title>
+        <meta property="fb:app_id" content="<?php echo Yii::app()->params['facebookAppId']; ?>" /> 
+          <meta property="og:title" content="Shape your future with INTI's It's Your Uni-Verse!" /> 
+          <meta property="og:image" content="http://intiuniverse.phpfogapp.com/images/icon/76x76.png" /> 
+          <meta property="og:description" content="Stand a chance to win an iPad 2, a Fujifilm Instax Mini 7s Polaroid Camera or tickets to your favourite movies while creating your dream campus with courses and interests that you've always wanted to pursue, so that you can live the life you've always dreamed of!" /> 
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.reveal.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/facebook.wrapper.js?0.994432"></script>
